@@ -14,10 +14,12 @@ html(lang="es")
     table.table.table-striped
       thead
         tr
+          th ID
           th Opcion
           th Valor
       tbody
         each option in options
           tr
+            td #{option.id}
             td #{option.name}
             td #{option.count}
