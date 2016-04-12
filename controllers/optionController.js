@@ -68,7 +68,7 @@ module.exports = {
 			console.log(req.params.id);
 			return res.status(404).json({error:true, message:'Id not found'});
 		}
-		Opcion.findOne({id:req.params.id},{ "_id": 0, "__v": 0 }, function(err, opt){
+		Opcion.findOne({id:req.params.id}, function(err, opt){
 			if(err){
 				console.log('ERROR: ' + err);
 		        return res.status(500).json({error:true, message:'Server connection error. Please try later'});
@@ -77,9 +77,7 @@ module.exports = {
 				return res.status(404).json({error:true, message:'Option not found'});
 			} else {
 
-				
-
-				opt.count = opt.count + 1;
+				opt.count = opt.count+1;
 				opt.updated = Date.now();
 
 				opt.save(function (err, o){
