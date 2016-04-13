@@ -8,6 +8,9 @@ var mongoose = require('mongoose');
 var config = require(__dirname + '/config/env/production.js');
 
 var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
 var port = process.env.PORT || 3000;
 
 
@@ -25,8 +28,9 @@ mongoose.connection.on('disconnected', connect);
 require(__dirname + '/config/express.js')(app);
 
 // Bootstrap routess
-require(__dirname + '/config/routes.js')(app);
+require(__dirname + '/config/routes.js')(app,io);
 
-app.listen(port);
-console.log('Listening on port ' + port);
+http.listen(3000, function(){
+  console.log('listening on *:3000');
+});
 

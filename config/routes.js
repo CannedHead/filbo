@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var optionController = require('../controllers/optionController');
 
 
-module.exports = function (app) {
+module.exports = function (app, io) {
 
   app.get('/', function(req, res) {
     optionController.readOptionsCallback(function(err,options){
@@ -19,7 +19,7 @@ module.exports = function (app) {
   
   app.get('/options', optionController.readOptions);
   app.post('/option', optionController.createOption);
-  app.post('/option/:id', optionController.increaseOption);
+  app.post('/option/:id', optionController.increaseOption(io));
   
   /**
    * Error handling

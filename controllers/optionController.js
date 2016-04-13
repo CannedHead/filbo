@@ -62,33 +62,39 @@ module.exports = {
         });
     }, 
 
-	increaseOption: function(req, res, next){
+	increaseOption: function(socket){
 
-		if(!req.params.id){
-			console.log(req.params.id);
-			return res.status(404).json({error:true, message:'Id not found'});
-		}
-		Opcion.findOne({id:req.params.id}, function(err, opt){
-			if(err){
-				console.log('ERROR: ' + err);
-		        return res.status(500).json({error:true, message:'Server connection error. Please try later'});
-			}
-			if(!opt){				
-				return res.status(404).json({error:true, message:'Option not found'});
-			} else {
 
-				opt.count = opt.count+1;
-				opt.updated = Date.now();
+				return function(req, res, next){
 
-				opt.save(function (err, o){
-                  if(err){
-                    console.log('ERROR: ' + err);
-                    res.status(500).json({error: true, message:'Server connection error. Please try later'});       
-                  } else {
-                    res.status(200).json({error: false, message:'Option has been increased', option: o});
-                  }               
-                });
-			}
-		});
+						if(!req.params.id){
+							console.log(req.params.id);
+							return res.status(404).json({error:true, message:'Id not found'});
+						}
+						Opcion.findOne({id:req.params.id}, function(err, opt){
+							if(err){
+								console.log('ERROR: ' + err);
+						        return res.status(500).json({error:true, message:'Server connection error. Please try later'});
+							}
+							if(!opt){				
+								return res.status(404).json({error:true, message:'Option not found'});
+							} else {
+
+								opt.count = opt.count+1;
+								opt.updated = Date.now();
+
+								opt.save(function (err, o){
+				                  if(err){
+				                    console.log('ERROR: ' + err);
+				                    res.status(500).json({error: true, message:'Server connection error. Please try later'});       
+				                  } else {
+				                  	socket.emit('update',{option:o});
+				                    res.status(200).json({error: false, message:'Option has been increased', option: o});
+				                  }               
+				                });
+							}
+						});
+				}
+
 	}
 }
