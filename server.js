@@ -30,7 +30,7 @@ require(__dirname + '/config/express.js')(app);
 // Bootstrap routess
 require(__dirname + '/config/routes.js')(app,io);
 
-http.listen(3000, function(){
+http.listen(port, function(){
   console.log('listening on *:3000');
 });
 
