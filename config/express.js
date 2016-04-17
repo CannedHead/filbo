@@ -18,7 +18,7 @@ var mongoStore = require('connect-mongo')(session);
 var flash = require('connect-flash');
 var winston = require('winston');
 var helpers = require('view-helpers');
-var config = require('./env/development');
+var config = require('./env/production');
 var pkg = require('../package.json');
 
 var env = process.env.NODE_ENV || 'production';

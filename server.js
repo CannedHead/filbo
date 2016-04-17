@@ -5,7 +5,7 @@
 var fs = require('fs');
 var express = require('express');
 var mongoose = require('mongoose');
-var config = require(__dirname + '/config/env/development.js');
+var config = require(__dirname + '/config/env/production.js');
 
 var app = express();
 var http = require('http').Server(app);
