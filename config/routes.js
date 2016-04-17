@@ -16,6 +16,14 @@ module.exports = function (app, io) {
       });   
     }); 
   });
+
+  app.get('/test', function(req, res) {
+    optionController.readOptionsCallback(function(err,options){
+      res.render('index2', {
+          options: options
+      });   
+    }); 
+  });
   
   app.get('/options', optionController.readOptions);
   app.post('/option', optionController.createOption);

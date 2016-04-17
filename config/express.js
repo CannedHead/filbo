@@ -107,7 +107,7 @@ module.exports = function (app) {
   // cookieParser should be above session
   app.use(cookieParser());
   app.use(cookieSession({ secret: 'secret' }));
-  app.use(session({
+  /*app.use(session({
     secret: pkg.name,
     proxy: true,
     resave: true,
@@ -116,7 +116,7 @@ module.exports = function (app) {
       url: config.db,
       collection : 'sessions'
     })
-  }));
+  }));*/
 
 
 
