@@ -840,11 +840,6 @@ h2{
 @media (min-width: 1200px) {
 	
 
-	
-
-
-
-
      html, body{
 		background-color: #00AEEF !important;
 
@@ -875,7 +870,7 @@ h2{
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 	
 	     html, body{
-	 	background-color: #21c5eb !important;
+	 		background-color: #21c5eb !important;
 
 	 	}
 
