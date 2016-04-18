@@ -9,7 +9,7 @@ var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
 
 	alert('Its Safari');
-	$( "body , html" ).addClass( "plop" );
+	$( "body , html" ).addClass( "safari-back" );
 
 
 }

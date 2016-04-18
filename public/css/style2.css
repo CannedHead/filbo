@@ -47,7 +47,10 @@ html, body{
 
 
 
+.safari-black{
 
+	background-color: #21c5eb !important;
+}
 
 html {
   position: relative;
