@@ -103,7 +103,8 @@ $(document).ready(function(){
 });
 
 $("#icons-wrapper button").click(function(){
-	$(this).data('id');
+	var buttonid = $(this).data('id');
+	console.log(buttonid);
     $("#plan-info").toggleClass('hidden');
     $(this).addClass("active");
     $("#icons-wrapper").addClass("selected");
@@ -147,7 +148,6 @@ function loadVideos(videos){
   * Creates video HTML tag and adds video to the given container.
   */
 function loadVideoHTML(container, video, videoid, imgposter){
-	console.log(video);
 	$("#"+container).prepend('<video id="video'+videoid+'" class="img-responsive" preload="metadata" poster="'+imgposter+'" style="display:none;"></video>');
 	$("#video"+videoid).append('<source src="'+video+'.mp4">');
 	$("#video"+videoid).append('<source src="'+video+'.ogg">');
@@ -155,7 +155,7 @@ function loadVideoHTML(container, video, videoid, imgposter){
 }
 
 /*
- * Fade between two videos
+ * Fades between two videos
  */
 function fadeVideos(from , to){
 	$("#video"+from).css("display","none");
