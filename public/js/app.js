@@ -160,7 +160,7 @@ function loadVideoHTML(container, video, videoid, imgposter){
 function fadeVideos(from , to){
 	$("#video"+from).css("display","none");
 	$("#video"+to).css("display","block");
-	document.getElementById("video"+to).play();
+	$("#video"+to).get(0).play();
 }
 
 loadVideos(content);
