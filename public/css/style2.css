@@ -653,7 +653,7 @@ h2{
 
 	@-moz-document url-prefix() {
     html, body{
-    	background-color: #0FBCEA;
+    	background-color: #0FBCEA !important;
 
     }
 }
