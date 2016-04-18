@@ -43,14 +43,7 @@ html, body{
     }
 }
 
-@media screen and (min-color-index:0) 
-and(-webkit-min-device-pixel-ratio:0) { @media
-{
-    html, body{
-	background-color: #21c5eb;
 
-	}
-}}
 
 
 
@@ -637,9 +630,9 @@ h2{
 	-moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.30);
 	box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.30);
 
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
 
 	color:white;
 }
@@ -668,7 +661,7 @@ h2{
 
     background-color: #FDF3E8;
     position: relative;
-    padding: 15px;
+    padding: 15px 15px 80px 15px;
 }
 
 .modal-counter-container p {
@@ -740,6 +733,7 @@ h2{
 	}
 
 	.modal-header .close{
+		position: absolute;
 		width: 30px;
 		height: 30px;
 		color: #F7941E;
@@ -751,21 +745,22 @@ h2{
 		-moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.30);
 		box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.30);
 
-		-webkit-border-radius: 15px;
-		-moz-border-radius: 15px;
-		border-radius: 15px;
-
+	
 	
 	}
 
 	.modal-header .close-add{
 		position: absolute;
 		    background: #F7941E;
+		    color: white;
+		    font-family: 'GothamRnd-Medium';
+		    font-size: 0.8em;
+		    
 		
 		    /* left: 123px; */
 		    right: 15px;
-		    padding: 0px 40px 0px 15px;
-		    top: 49px;
+		    padding: 8px 40px 3px 15px;
+		    top: 37px;
 		    height: 30px;
 		    -webkit-border-radius: 15px;
 			-moz-border-radius: 15px;
@@ -777,10 +772,19 @@ h2{
 
 
 	.modal-header.close-add p{
+		font-size: 0.9em;
+	}
 
-		position: relative;
-		  top: 50%;
-		  transform: translateY(-50%);
+
+	.modal-header .icon-modal-container{
+		position:relative;
+		background-color: transparent;
+		border: none;
+		left:50%;
+		width: 100px;
+		height: 100px;
+		margin-left: -50px;
+		margin-bottom: 10px;
 	}
 
 }
@@ -823,7 +827,13 @@ h2{
 
 
 
+@media only screen and (-webkit-min-device-pixel-ratio: 1) {
+     ::i-block-chrome, 
+            html, body{
+        	background-color: #21c5eb !important;
 
+        	}
+}
 
 
 
@@ -836,25 +846,30 @@ h2{
 @media (min-width: 1200px) {
 	
 
+	
+
+
+
+
+     html, body{
+		background-color: #00AEEF !important;
+
+	}
+
+
 	@-moz-document url-prefix() {
     html, body{
     	background-color: #0FBCEA !important;
 
     }
 
+   
 
-    @media screen and (min-color-index:0) 
-    and(-webkit-min-device-pixel-ratio:0) { @media
-    {
-        html, body{
-    	background-color: #21c5eb !important;
 
-    	}
-    }}
-
-    html, body{
-	background-color: #00AEEF;
-
+	.modal-header .close-add{
+		
+		top: 50px;
+		   
 	}
 
 
