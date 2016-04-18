@@ -18,7 +18,7 @@ var content = [
 		"title":"Vuelve la vivienda a Bogotá",
 		"text":"187 mil nuevas viviendas + Ciudad Norte, una ciudad única en el mundo",
 		"icon":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/1.svg",
-		"count":"12345",
+		"count":"123",
 		"animation":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/BOTON1",
 		"poster":"https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/poster.png",
 		"videourl":'<iframe src="https://player.vimeo.com/video/163168624?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
@@ -120,6 +120,8 @@ $(document).ready(function(){
 
 
 
+
+
 $("#icons-wrapper button").click(function(){
 	var buttonid = $(this).data('id');
 	
@@ -176,7 +178,6 @@ function updateInformation(buttonid){
 	modal.find('.video-container').html(content[buttonid].videourl);
 	$(".video-container").fitVids();
 	$('#twittershare').attr("href",content[buttonid].twitterurl);
-	$('#twittershare2').attr("href",content[buttonid].twitterurl);
 
 	var count = parseInt(content[buttonid].count);
     var defaults = {

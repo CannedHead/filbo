@@ -684,12 +684,11 @@ h2{
 	box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.34);
 }
 
-#counter2{
-	width: 60%;
-	left: 50%;
-	position: relative;
-	margin-left: -30%;
-
+#counter2 {
+    width: 60%;
+    left: 50%;
+    position: relative;
+    margin-left: -43%;
 }
 
 #counter2.default .digit span{
@@ -714,16 +713,14 @@ h2{
 .cadena2small {
     position: absolute;
     top: 0px;
-    width: 13px;
-    right: 26%;
+    width: 12px;
+    right: 37%;
 }
-
-
 .cadena1small {
     position: absolute;
     top: 0px;
-    width: 13px;
-    left: 26%;
+    width: 12px;
+    right: 59%;
 }
 
 
@@ -754,24 +751,22 @@ h2{
 
 
 @media (min-width: 520px) {
-	#counter2{
-		width: 50%;
-		left: 50%;
-		position: relative;
-		margin-left: -25%;
-
+	#counter2 {
+	    width: 50%;
+	    left: 50%;
+	    position: relative;
+	    margin-left: -35%;
 	}
 
 }
 
 
 @media (min-width: 768px) {
-	#counter2{
-		width: 30%;
-		left: 50%;
-		position: relative;
-		margin-left: -15%;
-
+	#counter2 {
+	    width: 30%;
+	    left: 50%;
+	    position: relative;
+	    margin-left: -22%;
 	}
 
 	.modal-header .close{
@@ -830,6 +825,21 @@ h2{
 		margin-left: -50px;
 		margin-bottom: 10px;
 	}
+
+
+	.cadena2small {
+	    position: absolute;
+	    top: 0px;
+	    width: 12px;
+	    right: 44%;
+	}
+	.cadena1small {
+	    position: absolute;
+	    top: 0px;
+	    width: 12px;
+	    right: 55%;
+	}
+
 
 }
 
@@ -941,6 +951,20 @@ h2{
 	.img-modal-bogota{
 		position: absolute;
 		bottom: 20px;
+	}
+
+	.cadena2 {
+	    position: absolute;
+	    top: -76px;
+	    width: 16px;
+	    right: 18%;
+	}
+
+	.cadena1 {
+	    position: absolute;
+	    top: -76px;
+	    width: 16px;
+	    left: 47%;
 	}
 
 
@@ -1150,6 +1174,25 @@ h2{
 	  display: none;
 	}
 
+	.cadena1 {
+	    position: absolute;
+	    top: -25px;
+	    width: 16px;
+	    left: 49%;
+	}
+
+	.cadena2 {
+	    position: absolute;
+	    top: -26px;
+	    width: 16px;
+	    right: 18%;
+	}
+
+	.modal-hero {
+	    padding: 0px 9%;
+	    font-size: 1em;
+	}
+
 
 
 
@@ -1173,6 +1216,24 @@ h2{
 
 }
 
+
+@media (min-width: 1365px) {
+	
+.cadena1 {
+	    position: absolute;
+	    top: -7px;
+	    width: 16px;
+	    left: 49%;
+	}
+
+	.cadena2 {
+	    position: absolute;
+	    top: -7px;
+	    width: 16px;
+	    right: 18%;
+	}
+
+}
 
 
 
@@ -1229,11 +1290,11 @@ h2{
 
 
 
-	.cadena1{
-		position: absolute;
-		    top: -27px;
-		    width: 19px;
-		    left: 27%;
+	.cadena1 {
+	    position: absolute;
+	    top: -27px;
+	    width: 19px;
+	    left: 50%;
 	}
 
 	.cadena2{
