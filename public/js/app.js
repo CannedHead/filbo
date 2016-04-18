@@ -205,6 +205,7 @@ function loadVideoHTML(container, video, videoid, imgposter){
  * Fades between two videos
  */
 function fadeVideos(from , to){
+	$("#video"+to).currentTime = 0.1; 
 	$("#video"+from).css("display","none");
 	$("#video"+to).css("display","block");
 	$("#video"+to).get(0).play();
