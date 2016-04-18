@@ -6,7 +6,13 @@ var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
    if ((is_chrome)&&(is_safari)) {is_safari=false;}
    if ((is_chrome)&&(is_opera)) {is_chrome=false;}
 
-if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {alert('Its Safari');}
+if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+
+	
+	$( "body , html" ).addClass( "safari-back" );
+
+
+}
 var content = [
 	{
 		"title":"Vuelve la vivienda a Bogotá",
