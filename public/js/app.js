@@ -105,6 +105,7 @@ $("#icons-wrapper button").click(function(){
 	$(this).data('id');
     $("#plan-info").toggleClass('hidden');
     $(this).addClass("active");
+    $("#icons-wrapper").addClass("selected");
     fadeVideos(0, 1);
 });
 
@@ -127,6 +128,9 @@ $('#myModal').on('show.bs.modal', function (event) {
     var counter2 = new flipCounter('counter2', defaults);
 });
 
+$('#myModal').on('hidden.bs.modal', function (event) {
+	$("#icons-wrapper").removeClass("selected");
+});
 
 /**
   * Add all videos to given.
