@@ -131,6 +131,9 @@ $("#icons-wrapper button").click(function(){
 		$("#icons-wrapper").addClass("selected");
 		fadeVideos(0, buttonid);
 		current = buttonid;
+	
+
+
 
 	} else {
 		
