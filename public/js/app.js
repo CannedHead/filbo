@@ -135,10 +135,6 @@ $("#icons-wrapper button").click(function(){
 		$("#icons-wrapper").addClass("selected");
 		fadeVideos(0, buttonid);
 		current = buttonid;
-
-
-
-
 	} else {
 		
 		if(buttonid == current){
@@ -215,17 +211,6 @@ function fadeVideos(from , to){
 	$("#video"+from).css("display","none");
 	$("#video"+to).css("display","block");
 	$("#video"+to).get(0).play();
-
-	var vid = document.getElementById('video'+to);
-	if(vid.readyState !== 4){ //HAVE_ENOUGH_DATA
-		vid.addEventListener('canplaythrough', onCanPlay, false);
-		vid.addEventListener('load', onCanPlay, false); //add load event as well to avoid errors, sometimes 'canplaythrough' won't dispatch.
-		setTimeout(function(){
-			vid.pause(); //block play so it buffers before playing
-		}, 1); //it needs to be after a delay otherwise it doesn't work properly.
-	}else{
-		//video is ready
-	}
 }
 
 loadVideos(content);

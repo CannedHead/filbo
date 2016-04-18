@@ -11,7 +11,7 @@ module.exports = function (app, io) {
 
   app.get('/', function(req, res) {
     optionController.readOptionsCallback(function(err,options){
-      res.render('index', {
+      res.render('index2', {
           options: options
       });   
     }); 
@@ -19,7 +19,7 @@ module.exports = function (app, io) {
 
   app.get('/test', function(req, res) {
     optionController.readOptionsCallback(function(err,options){
-      res.render('index2', {
+      res.render('index', {
           options: options
       });   
     }); 
