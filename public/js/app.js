@@ -176,6 +176,7 @@ function updateInformation(buttonid){
 	modal.find('.video-container').html(content[buttonid].videourl);
 	$(".video-container").fitVids();
 	$('#twittershare').attr("href",content[buttonid].twitterurl);
+	$('#twittershare2').attr("href",content[buttonid].twitterurl);
 
 	var count = parseInt(content[buttonid].count);
     var defaults = {
