@@ -32,7 +32,7 @@
 }
 
 html, body{
-	background-color: #00AEEF;
+	background-color: #0FBCEA;
 
 }
 
@@ -625,4 +625,37 @@ h2{
 	.flip-counter.default .digit .hinge {
 	  width: 32px;
 	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) {
+	html, body{
+	background-color: #00AEEF;
+
+	}
+
+	@-moz-document url-prefix() {
+    html, body{
+    	background-color: #0FBCEA;
+
+    }
+}
+
 }
