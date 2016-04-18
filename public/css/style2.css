@@ -57,6 +57,9 @@ a, a:focus, button, button:focus {
 	width:100%;
 }
 
+.transparent{
+	opacity:0;
+}
 .logo{
 	margin-top: 20px;
 }
