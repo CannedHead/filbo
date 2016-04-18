@@ -153,6 +153,7 @@ $("#icons-wrapper button").click(function(){
 });
 
 $('#myModal').on('hidden.bs.modal', function (event) {
+	$("#video"+current).currentTime = 0.1; 
 	$("#plan-info").addClass('hidden');
 	$("#icons-wrapper").removeClass("selected");
 	$("#icons-wrapper .active").removeClass("active");
