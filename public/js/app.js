@@ -98,41 +98,72 @@ var content = [
 	},
 ];
 
+var current = '';
+
 $(document).ready(function(){
     $(".video-container").fitVids();
 });
 
 $("#icons-wrapper button").click(function(){
 	var buttonid = $(this).data('id');
-	console.log(buttonid);
-    $("#plan-info").toggleClass('hidden');
-    $(this).addClass("active");
-    $("#icons-wrapper").addClass("selected");
-    fadeVideos(0, 1);
-});
+	
+	console.log('buttonid:'+buttonid);
+	console.log('current:'+current);
 
-$('#myModal').on('show.bs.modal', function (event) {
-  	var button = $(event.relatedTarget);
-  	var id = button.data('id');
-  	var cont = content[id-1];
-	var modal = $(this);
-	$('.modal-icon').attr("src",cont.icon);
-	modal.find('.modal-title').text(cont.title);
-	modal.find('.modal-hero').text(cont.text);
-	modal.find('.video-container').html(cont.videourl);
-	$(".video-container").fitVids();
+	if(current===''){
+		console.log("Caso:current no definido");
+		updateInformation(buttonid);
+		$("#plan-info").toggleClass('hidden');
+		$(this).addClass("active");
+		$("#icons-wrapper").addClass("selected");
+		fadeVideos(0, buttonid);
+		current = buttonid;
 
-	var count = parseInt(cont.count);
-    var defaults = {
-        value: count, inc: 1, pace: 500, auto: true
-    };
-
-    var counter2 = new flipCounter('counter2', defaults);
+	} else {
+		
+		if(buttonid == current){
+			console.log("Caso:mismo current y buttonid");
+		    $("#plan-info").toggleClass('hidden');
+		    $(this).toggleClass("active");
+		    $("#icons-wrapper").toggleClass("selected");
+		    current = '';
+		} else {
+			console.log("Caso:switch");
+			updateInformation(buttonid);
+			$("#icons-wrapper .active").removeClass("active");
+			$(this).toggleClass("active");
+			fadeVideos(current, buttonid);
+			current = buttonid;
+		}
+	}
 });
 
 $('#myModal').on('hidden.bs.modal', function (event) {
 	$("#icons-wrapper").removeClass("selected");
 });
+
+/*
+ * Update content information
+ */
+function updateInformation(buttonid){
+	//Title update
+	$("#tituloplan").text(content[buttonid].title);
+	
+	//Modal update
+	var modal =$('#myModal');
+	$('.modal-icon').attr("src",content[buttonid].icon);
+	modal.find('.modal-title').text(content[buttonid].title);
+	modal.find('.modal-hero').text(content[buttonid].text);
+	modal.find('.video-container').html(content[buttonid].videourl);
+	$(".video-container").fitVids();
+
+	var count = parseInt(content[buttonid].count);
+    var defaults = {
+        value: count, inc: 1, pace: 500, auto: false
+    };
+
+    var counter2 = new flipCounter('counter2', defaults);
+} 
 
 /**
   * Add all videos to given.
