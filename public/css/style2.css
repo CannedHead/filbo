@@ -33,6 +33,14 @@
 
 html, body{
 	background-color: #00AEEF;
+
+}
+
+@-moz-document url-prefix() {
+    html, body{
+    	background-color: #0FBCEA;
+
+    }
 }
 
 html {
