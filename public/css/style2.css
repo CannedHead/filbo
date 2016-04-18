@@ -866,12 +866,3 @@ h2{
 
 }
 
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-	
-	     html, body{
-	 		background-color: #21c5eb !important;
-
-	 	}
-
-}
