@@ -11,7 +11,7 @@ var content = [
 	{
 		"title":"dv",
 		"text":"recds",
-		"icon":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/1.svg",
+		"icon":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/8.svg",
 		"count":"12345",
 		"video-url":'<iframe src="https://player.vimeo.com/video/163168624?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
 		"facebook-url":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT",
@@ -89,3 +89,15 @@ var content = [
 		"google-plus-url":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT"
 	},
 ];
+
+$('#myModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget);
+  var id = button.data('id');
+  console.log(content[id-1].icon);
+  var cont = content[id-1];
+  var modal = $(this);
+  $('.modal-icon').attr("src",cont.icon);
+  modal.find('.modal-title').text(cont.title);
+  modal.find('.modal-hero').text(cont.text);
+  //modal.find('.modal-body input').val(recipient)
+})

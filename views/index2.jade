@@ -29,7 +29,7 @@ html(lang="es")
         .col-xs-7
           ul.col-xs-12.no-padding.flip-counter.default#counter
         .col-xs-5
-          button.btn-block.btn-ver-mas(data-toggle="modal" data-target="#myModal")
+          button.btn-block.btn-ver-mas(data-toggle="modal" data-target="#myModal" data-id="1")
             span Ver más
         .col-xs-12
           p.subhero 
@@ -132,12 +132,12 @@ html(lang="es")
             .row  
               .icon-modal-container.has-feedback
                 .img-container
-                  img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/1.svg" alt="")
+                  img.modal-icon( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/1.svg" alt="")
                 .circle.outer
                   .circle.inner
             h3.modal-title Vuelve la vivienda a Bogotá
           .col-xs-12.modal-body
-            p 6 nuevos hospitales + 40 nuevos Centros de Atención Prioritaria en Salud.
+            p.modal-hero 6 nuevos hospitales + 40 nuevos Centros de Atención Prioritaria en Salud.
             .video-container
               iframe(src="https://player.vimeo.com/video/163168624?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
           .col-xs-12.modal-counter-container
