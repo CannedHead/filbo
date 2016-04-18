@@ -26,7 +26,6 @@ html(lang="es")
           h2#tituloplan Vuelve la vivienda a Bogotá
         .col-xs-8
           ul.col-xs-12.no-padding.flip-counter.default#counter
-          #flip-counter
         .col-xs-4.no-padding
           button.btn-block.btn-ver-mas(data-toggle="modal" data-target="#myModal" data-id="1")
             span Ver más
@@ -165,13 +164,13 @@ html(lang="es")
     script(src="js/socket.io.js")
     script(src="js/bootstrap.min.js")
     script(src="js/parallax.min.js")
-    script(src="js/notmyflip.js")
+    script(src="js/flipCounter.js")
     script(src="js/jquery.fitvids.js")
     script(src="js/app.js")
     script.
 
       var defaults = {
-        value: 52678
+        value: 52678, inc: 123, pace: 1000, auto: true
       };
 
       var counter = new flipCounter('counter', defaults);
