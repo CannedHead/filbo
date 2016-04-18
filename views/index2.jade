@@ -102,7 +102,7 @@ html(lang="es")
             .img-container
               img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/8.svg", 
                 alt="")
-    footer.footer
+    footer.footer.visible-xs.visible-sm
       .container
         .col-xs-8
           p.text-muted Comparte la Bogotá que estamos construyendo
@@ -118,32 +118,34 @@ html(lang="es")
             li
               a(href="#")
                 i.fa.fa-google-plus
-    .modal.fade(id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
-      .modal-dialog
-        .col-xs-12.no-padding.modal-content
+    .modal.fade.no-padding(id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+    
+        .col-xs-12.col-md-9.no-padding.modal-content
           .col-xs-12.modal-header
             button(type="button" class="close" data-dismiss="modal" aria-label="Close")
               span(aria-hidden="true") &times;
-            .row  
+            button.hidden-xs(type="button" class="close-add" data-dismiss="modal" aria-label="Close")
+                p Volver al mapa
+            .col-xs-12.no-padding
               .icon-modal-container.has-feedback
                 .img-container
                   img.modal-icon( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/1.svg" alt="")
                 .circle.outer
                   .circle.inner
-            h3.modal-title Vuelve la vivienda a Bogotá
-          .col-xs-12.modal-body
-            p.modal-hero 6 nuevos hospitales + 40 nuevos Centros de Atención Prioritaria en Salud.
-            .video-container
-              iframe(src="https://player.vimeo.com/video/163168624?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
-          .col-xs-12.modal-counter-container
-            ul.col-xs-12.no-padding.flip-counter.default#counter2
+              h3.modal-title Vuelve la vivienda a Bogotá
+              p.modal-hero 6 nuevos hospitales + 40 nuevos Centros de Atención Prioritaria en Salud.
+              .video-container.col-xs-12.col-sm-8.col-sm-offset-2.no-padding
+                iframe(src="https://player.vimeo.com/video/163168624?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+        .col-xs-12.col-md-3.modal-counter-container
+          ul.no-padding.flip-counter.default#counter2
+          .col-xs-12
             p 
               | Personas creen en 
               br
               | una mejor Bogotá.
-            .col-xs-8.col-xs-offset-2
-              img.img-responsive(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/bogotamejorparatodos_azul.svg", alt="Bogotá mejor para todos")
-          .col-xs-12.modal-footer.footer
+          .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-10.col-md-offset-1
+            img.img-responsive(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/bogotamejorparatodos_azul.svg", alt="Bogotá mejor para todos")
+          .col-xs-12.modal-footer.footer.visible-xs.visible-sm
             .container.no-padding
               .col-xs-7
                 p.text-muted Comparte la Bogotá que estamos construyendo
