@@ -36,6 +36,10 @@ body {
   font-family: 'Gotham Narrow Medium';
 }
 
+a, a:focus, button, button:focus {
+  outline: none;
+}
+
 .no-padding{
 	padding: 0;
 }
