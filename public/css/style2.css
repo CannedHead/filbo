@@ -53,6 +53,8 @@ and(-webkit-min-device-pixel-ratio:0) { @media
 }}
 
 
+
+
 html {
   position: relative;
   min-height: 100%;
@@ -157,6 +159,14 @@ h2{
 .icons-wrapper{
 	margin-top: 50px;
 	margin-bottom: 50px;
+}
+
+#icons-wrapper.selected button{
+	opacity: 0.2;
+}
+
+#icons-wrapper.selected button.active{
+	opacity: 1;
 }
 
 .icon-container{
