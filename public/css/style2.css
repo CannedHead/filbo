@@ -834,10 +834,7 @@ h2{
 
 
 @media (min-width: 1200px) {
-	html, body{
-	background-color: #00AEEF;
-
-	}
+	
 
 	@-moz-document url-prefix() {
     html, body{
@@ -854,6 +851,11 @@ h2{
 
     	}
     }}
+
+    html, body{
+	background-color: #00AEEF;
+
+	}
 
 
 }
