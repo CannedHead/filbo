@@ -118,6 +118,8 @@ $(document).ready(function(){
     $(".video-container").fitVids();
 });
 
+
+
 $("#icons-wrapper button").click(function(){
 	var buttonid = $(this).data('id');
 	
@@ -131,6 +133,9 @@ $("#icons-wrapper button").click(function(){
 		$("#icons-wrapper").addClass("selected");
 		fadeVideos(0, buttonid);
 		current = buttonid;
+
+
+
 
 	} else {
 		

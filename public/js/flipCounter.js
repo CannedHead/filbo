@@ -21,6 +21,9 @@ var flipCounter = function(d, options){
     places: 0
   };
 
+  var i = 0;
+
+
   var counter = options || {};
   var doc = window.document;
 
@@ -111,6 +114,7 @@ var flipCounter = function(d, options){
    *   Number to add to counter value
    */
   this.add = function(n){
+
     if (_isNumber(n)){
       x = counter.value;
       counter.value += n;
@@ -157,9 +161,12 @@ var flipCounter = function(d, options){
     return this;
   };
 
+ 
+ 
   //---------------------------------------------------------------------------//
 
   function _doCount(first){
+    
     var first_run = typeof first === "undefined" ? false : first;
 
     x = counter.value.toFixed(counter.decimals);
@@ -168,7 +175,10 @@ var flipCounter = function(d, options){
     y = counter.value.toFixed(counter.decimals);
     _digitCheck(x, y);
     // Do first animation
-    if (counter.auto === true) nextCount = setTimeout(_doCount, counter.pace);
+    if (counter.auto === true && i<counter.hasta) {
+      nextCount = setTimeout(_doCount, counter.pace);
+      i++;
+    }
   }
 
   function _digitCheck(x, y){
@@ -290,8 +300,10 @@ var flipCounter = function(d, options){
   function _clearNext(){
     clearTimeout(nextCount);
     nextCount = null;
+
   }
 
   // Start it up
   _doCount(true);
+
 };
