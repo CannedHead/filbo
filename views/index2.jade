@@ -3,7 +3,7 @@ html(lang="es")
   head
     meta(charset='utf-8')
     meta(http-equiv='x-ua-compatible', content='ie=edge')
-    title Bogota para todos
+    title Bogotá mejor para todos
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='apple-touch-icon', href='apple-touch-icon.png')
@@ -125,8 +125,8 @@ html(lang="es")
                 i.fa.fa-google-plus
     .modal.fade(id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
       .modal-dialog
-        .modal-content
-          .modal-header
+        .col-xs-12.no-padding.modal-content
+          .col-xs-12.modal-header
             button(type="button" class="close" data-dismiss="modal" aria-label="Close")
               span(aria-hidden="true") &times;
             .row  
@@ -136,9 +136,19 @@ html(lang="es")
                 .circle.outer
                   .circle.inner
             h3.modal-title Vuelve la vivienda a Bogotá
-          .modal-body
+          .col-xs-12.modal-body
             p 6 nuevos hospitales + 40 nuevos Centros de Atención Prioritaria en Salud.
-          .modal-footer.footer
+            .video-container
+              iframe(src="https://player.vimeo.com/video/163168624?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+          .col-xs-12.modal-counter-container
+            ul.col-xs-12.no-padding.flip-counter.default#counter2
+            p 
+              | Personas creen en 
+              br
+              | una mejor Bogotá.
+            .col-xs-8.col-xs-offset-2
+              img.img-responsive(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/bogotamejorparatodos_azul.svg", alt="Bogotá mejor para todos")
+          .col-xs-12.modal-footer.footer
             .container.no-padding
               .col-xs-7
                 p.text-muted Comparte la Bogotá que estamos construyendo
@@ -159,6 +169,7 @@ html(lang="es")
     script(src="js/bootstrap.min.js")
     script(src="js/parallax.min.js")
     script(src="js/flipcounter.js")
+    script(src="js/jquery.fitvids.js")
     script(src="js/app.js")
     script.
 
@@ -167,6 +178,7 @@ html(lang="es")
       };
 
       var counter = new flipCounter('counter', defaults);
+      var counter2 = new flipCounter('counter2', defaults);
 
       var socket = io();
       socket.on('update', function(data){

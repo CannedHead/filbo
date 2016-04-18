@@ -502,7 +502,6 @@ h2{
 	padding: 0 40px;
 }
 .modal-body {
-  margin-bottom: 60px;
   background-color:#3177AB;
 }
 
@@ -516,6 +515,22 @@ h2{
 
 .modal-footer .text-muted{
 	font-size: 0.9em;
+}
+
+.video-container{
+	width: 100%;
+}
+
+.modal-counter-container{ 
+    margin-bottom: 60px;
+    background-color: #FDF3E8;
+    position: relative;
+    padding: 15px;
+}
+
+.modal-counter-container p {
+	text-align: center;
+	color:#1C75BC;
 }
 
 @media (min-width: 360px) {
