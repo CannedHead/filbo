@@ -153,7 +153,10 @@ $("#icons-wrapper button").click(function(){
 });
 
 $('#myModal').on('hidden.bs.modal', function (event) {
+	$("#plan-info").addClass('hidden');
 	$("#icons-wrapper").removeClass("selected");
+	$("#icons-wrapper .active").removeClass("active");
+	current = '';
 });
 
 /*
