@@ -18,7 +18,8 @@ var flipCounter = function(d, options){
     pace: 1000,
     auto: true,
     decimals: 0,
-    places: 0
+    places: 0,
+    hasta: 10
   };
 
   var i = 0;
@@ -76,6 +77,18 @@ var flipCounter = function(d, options){
   };
 
   /**
+   * Sets the limit of the counter. Only affects counter when auto == true.
+   *
+   * @param {int} n
+   *   New limit for counter 
+   */
+  this.setHasta = function(n){
+    counter.hasta = _isNumber(n) ? n : defaults.hasta;
+    return this;
+  };
+
+
+  /**
    * Sets counter to auto-increment (true) or not (false).
    *
    * @param {boolean} a
@@ -105,6 +118,10 @@ var flipCounter = function(d, options){
   this.step = function(){
     if (!counter.auto) _doCount();
     return this;
+  };
+
+  this.start = function(){
+     _doCount(true);
   };
 
   /**
