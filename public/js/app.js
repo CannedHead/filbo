@@ -21,7 +21,7 @@ var content = [
 		"count":"123",
 		"animation":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/BOTON1",
 		"poster":"https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/poster.png",
-		"videourl":'<iframe src="https://player.vimeo.com/video/163168624?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+		"videourl":'<iframe src="https://player.vimeo.com/video/163272172?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
 		"facebookurl":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT",
 		"twitterurl":"https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20conozco%20como%20regresa%20la%20vivienda%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Dvivienda%20%23FILBo2016%20pic.twitter.com%2FDCtAFPE0Mk",
 		"googleplus-url":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT"
@@ -45,7 +45,7 @@ var content = [
 		"count":"12345",
 		"animation":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/BOTON3",
 		"poster":"https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/poster.png",
-		"video-url":'<iframe src="https://player.vimeo.com/video/163168624?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+		"video-url":'<iframe src="https://player.vimeo.com/video/163262186?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
 		"facebookurl":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT",
 		"twitterurl":"https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20s%C3%A9%20como%20la%20salud%20ser%C3%A1%20prioridad%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Dsalud%20%23FILBo2016%20pic.twitter.com%2FkOQKi5icFm",
 		"googleplus-url":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT"
@@ -81,7 +81,7 @@ var content = [
 		"count":"12345",
 		"animation":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/BOTON6",
 		"poster":"https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/poster.png",
-		"videourl":'<iframe src="https://player.vimeo.com/video/163168624?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+		"videourl":'<iframe src="https://player.vimeo.com/video/163272173?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
 		"facebookurl":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT",
 		"twitterurl":"https://twitter.com/intent/tweet?text=Tuve%20%23ContactoConBogota%20y%20conozco%20el%20nuevo%20metro%20de%20mi%20ciudad%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Dmetro%20%23FILBo2016%20%20pic.twitter.com%2F8llPIVdFES",
 		"googleplus-url":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT"
@@ -112,55 +112,69 @@ var content = [
 	},
 ];
 
-var current = '';
+var activeButton = '';
+var currentVideo = 0;
 
 $(document).ready(function(){
     $(".video-container").fitVids();
 });
 
 
-
-
-
 $("#icons-wrapper button").click(function(){
-	var buttonid = $(this).data('id');
 	
-	console.log('buttonid:'+buttonid);
-	console.log('current:'+current);
+	var buttonid = $(this).data('id');
 
-	if(current===''){
+	//Si no hay ningun boton activo
+	if(activeButton === ''){
 		updateInformation(buttonid);
-		$("#plan-info").toggleClass('hidden');
-		$(this).addClass("active");
+		$("#plan-info").removeClass('hidden');
 		$("#icons-wrapper").addClass("selected");
-		fadeVideos(0, buttonid);
-		current = buttonid;
+		$(this).addClass("active");	
+		activeButton = buttonid;	
+		fadeVideos(currentVideo , buttonid);
+		playVideo(buttonid);
+	}
+	//Si el click es sobre el boton activo
+	else if(buttonid === activeButton){
 
-
-
-
-	} else {
-		
-		if(buttonid == current){
-		    $("#plan-info").toggleClass('hidden');
-		    $(this).toggleClass("active");
-		    $("#icons-wrapper").toggleClass("selected");
-		    current = '';
+		//hide info
+		if($(this).hasClass("active")){
+			$("#plan-info").addClass('hidden');
+			$("#icons-wrapper").removeClass("selected");
+			$("#icons-wrapper .active").removeClass("active");
+			activeButton='';
+			fadeVideos(currentVideo , buttonid);
+			restartVideo(buttonid);
+		//show info
 		} else {
 			updateInformation(buttonid);
-			$("#icons-wrapper .active").removeClass("active");
-			$(this).toggleClass("active");
-			fadeVideos(current, buttonid);
-			current = buttonid;
+			$("#plan-info").removeClass('hidden');
+			$("#icons-wrapper").addClass("selected");
+			$("#icons-wrapper .active").addClass("active");
+			activeButton = buttonid;
+			fadeVideos(currentVideo , buttonid);
+			playVideo(buttonid);
+			restartVideo(buttonid);
 		}
+
+	//Si existe un boton activo
+	} else {
+		updateInformation(buttonid);
+		$("#icons-wrapper .active").removeClass("active");
+		$(this).addClass("active");
+		activeButton = buttonid;
+		fadeVideos(currentVideo , buttonid);
+		playVideo(buttonid);
 	}
+
 });
 
 $('#myModal').on('hidden.bs.modal', function (event) {
-	$("#video"+current).currentTime = 0.1; 
 	$("#plan-info").addClass('hidden');
 	$("#icons-wrapper").removeClass("selected");
 	$("#icons-wrapper .active").removeClass("active");
+	activeButton='';
+	restartVideo(currentVideo);
 });
 
 /*
@@ -211,21 +225,30 @@ function loadVideoHTML(container, video, videoid, imgposter){
  * Fades between two videos
  */
 function fadeVideos(from , to){
-	$("#video"+to).currentTime = 0.1; 
-	$("#video"+from).css("display","none");
-	$("#video"+to).css("display","block");
-	$("#video"+to).get(0).play();
+	
+	if(from !== to){ 
 
-	var vid = document.getElementById('video'+to);
-	if(vid.readyState !== 4){ //HAVE_ENOUGH_DATA
-		vid.addEventListener('canplaythrough', onCanPlay, false);
-		vid.addEventListener('load', onCanPlay, false); //add load event as well to avoid errors, sometimes 'canplaythrough' won't dispatch.
-		setTimeout(function(){
-			vid.pause(); //block play so it buffers before playing
-		}, 1); //it needs to be after a delay otherwise it doesn't work properly.
-	}else{
-		//video is ready
+		var vid = document.getElementById("video"+to);
+		vid.pause();
+		vid.currentTime = 0.1;
+
+		$("#video"+from).css("display","none");
+		$("#video"+to).css("display","block");
+		currentVideo=to;
 	}
+}
+
+function playVideo(id){
+	console.log("play:video"+id);
+	var vid = document.getElementById("video"+id);
+	vid.play();
+}
+
+function restartVideo(id){
+	console.log("pause:video"+id);
+	var vid = document.getElementById("video"+id);
+		vid.pause();
+		vid.currentTime = 0;
 }
 
 loadVideos(content);
