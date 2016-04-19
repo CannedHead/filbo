@@ -190,6 +190,9 @@ $('#myModal').on('hidden.bs.modal', function (event) {
  * Update content information
  */
 function updateInformation(buttonid, limit){
+	
+	console.log(limit);
+
 	//Title update
 	$("#tituloplan").text(content[buttonid].title);
 	

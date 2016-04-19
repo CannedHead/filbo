@@ -11,6 +11,7 @@ html(lang="es")
     link(rel='stylesheet', href='css/font-awesome.min.css')
     link(rel='stylesheet', href='css/style2.css')
   body
+    
     .container-fluid.content-first
       .row
         .col-xs-6.col-xs-offset-3.col-sm-4-col-sm-offset-4.col-md-3.col-md-offset-0.col-md-push-9
@@ -39,7 +40,10 @@ html(lang="es")
         
 
       .row
-        .col-xs-12.no-padding.mapa
+        .col-xs-12.no-padding.mapa.has-feedback
+          ul#scene
+            li.layer(data-depth="0.20")
+              img.img-responsive(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/Nubes.png")
           .col-xs-12#video-container  
         .col-xs-12.col-md-6.icons-wrapper.buttons-row#icons-wrapper
           .col-xs-12
@@ -197,6 +201,10 @@ html(lang="es")
     script(src="js/flipCounter.js")
     script(src="js/jquery.fitvids.js")
     script(src="js/app.js")      
+    script.
+      var scene = document.getElementById('scene');
+      var parallax = new Parallax(scene);
+
 
     
      
