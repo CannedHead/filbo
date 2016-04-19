@@ -1086,13 +1086,13 @@ h2{
 		top:200px;
 	}
 
-	#plan-info{
-		position: absolute;
-		right: 0;
-		top: 165px;
-		z-index: 99;
-		width: 100%;
-		padding: 0px 50px;
+	#plan-info {
+	    position: absolute;
+	    right: 0;
+	    top: 165px;
+	    z-index: 99;
+	    width: 49%;
+	    padding: 0px 80px;
 	}
 
 	.btn-ver-mas {
@@ -1137,7 +1137,6 @@ h2{
 	
 
 	    text-align: right!important;
-	    border: solid 3px white;
 	    padding: 7px 8px;
 	    /* width: 69%; */
 	    right: 0;
@@ -1201,7 +1200,7 @@ h2{
 
      html, body{
 		background-color: #00AEEF !important;
-
+		height: 100%;
 	}
 
 	.content-first {
@@ -1216,7 +1215,7 @@ h2{
 
 	.mapa {
 	    position: relative;
-	    top: 100px;
+	    top: 155px;
 	}
 
 	.modal-header .close-add{
@@ -1267,14 +1266,7 @@ h2{
 		margin-top: 15px;
 	}
 
-	#plan-info {
-	    position: absolute;
-	    right: -23px;
-	    top: 151px;
-	    z-index: 99;
-	    width: 600px;
-	}
-
+	
 
 
 
@@ -1325,6 +1317,17 @@ h2{
 	    top: 151px;
 	    z-index: 99;
 	    width: 600px;
+	}
+
+	#tituloplan {
+	    text-align: right!important;
+	    padding: 7px 8px;
+	    /* width: 69%; */
+	    right: 0;
+	    /* margin-left: 34%; */
+	    margin-right: 15px;
+	    background-color: white;
+	    color: #00CEFC;
 	}
 
 	.hero-div h1 {
