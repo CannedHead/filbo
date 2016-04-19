@@ -6,11 +6,14 @@ var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
    if ((is_chrome)&&(is_safari)) {is_safari=false;}
    if ((is_chrome)&&(is_opera)) {is_chrome=false;}
 
+   var ie = navigator.appCodeName;
+   console.log(x);
+
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
 	$( "body , html" ).addClass( "safari-back" );
 }
 
-if (navigator.userAgent.indexOf('MSIE') > -1) {
+if ( ie === "Mozilla") {
 	$( "body , html" ).addClass( "safari-back" );
 	alert("ineternet explrorer");
 }
