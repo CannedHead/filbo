@@ -52,7 +52,7 @@ html, body{
 #scene{
 	position: absolute;
 	z-index: 2;
-	top:-40%;
+	top:-46px;
 }
 
 #video-container{
@@ -766,6 +766,10 @@ h2{
     margin-bottom: 15px;
 }
 
+#scene{
+	top:-60px;
+}
+
 }
 
 
@@ -813,6 +817,11 @@ h2{
 
 
 @media (min-width: 768px) {
+	
+	#scene{
+		top:-96px;
+	}
+
 	#counter2 {
 	    width: 30%;
 	    left: 50%;
@@ -905,6 +914,9 @@ h2{
 
 
 @media (min-width: 992px) {
+	#scene{
+		top:-138px;
+	}
 	.modal-content{
 		height: 100%;
 	}
@@ -1448,6 +1460,9 @@ h2{
 
 @media (min-width: 1680px) {
 	
+	#scene{
+		top:-237px;
+	}
 
      html, body{
 		background-color: #00AEEF !important;
