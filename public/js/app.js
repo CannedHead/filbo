@@ -123,10 +123,11 @@ $(document).ready(function(){
 $("#icons-wrapper button").click(function(){
 	
 	var buttonid = $(this).data('id');
+	var hasta = $(this).data('count');
 
 	//Si no hay ningun boton activo
 	if(activeButton === ''){
-		updateInformation(buttonid);
+		updateInformation(buttonid, hasta);
 		$("#plan-info").removeClass('hidden');
 		$("#icons-wrapper").addClass("selected");
 		$(this).addClass("active");	
@@ -147,7 +148,7 @@ $("#icons-wrapper button").click(function(){
 			restartVideo(buttonid);
 		//show info
 		} else {
-			updateInformation(buttonid);
+			updateInformation(buttonid, hasta);
 			$("#plan-info").removeClass('hidden');
 			$("#icons-wrapper").addClass("selected");
 			$("#icons-wrapper .active").addClass("active");
@@ -159,7 +160,7 @@ $("#icons-wrapper button").click(function(){
 
 	//Si existe un boton activo
 	} else {
-		updateInformation(buttonid);
+		updateInformation(buttonid, hasta);
 		$("#icons-wrapper .active").removeClass("active");
 		$(this).addClass("active");
 		activeButton = buttonid;
@@ -180,7 +181,7 @@ $('#myModal').on('hidden.bs.modal', function (event) {
 /*
  * Update content information
  */
-function updateInformation(buttonid){
+function updateInformation(buttonid, limit){
 	//Title update
 	$("#tituloplan").text(content[buttonid].title);
 	
@@ -195,10 +196,15 @@ function updateInformation(buttonid){
 
 	var count = parseInt(content[buttonid].count);
     var defaults = {
-        value: count, inc: 1, pace: 500, auto: false
+        value: 0, inc: 1, pace: 500, auto: true, hasta: limit
     };
 
-    var counter2 = new flipCounter('counter2', defaults);
+    var defaults2 = {
+        value: 1, inc: 1, pace: 500, auto: true, hasta: limit
+    };
+
+    var counter1 = new flipCounter('counter', defaults);
+    var counter2 = new flipCounter('counter2', defaults2);
 } 
 
 /**
@@ -239,13 +245,11 @@ function fadeVideos(from , to){
 }
 
 function playVideo(id){
-	console.log("play:video"+id);
 	var vid = document.getElementById("video"+id);
 	vid.play();
 }
 
 function restartVideo(id){
-	console.log("pause:video"+id);
 	var vid = document.getElementById("video"+id);
 		vid.pause();
 		vid.currentTime = 0;

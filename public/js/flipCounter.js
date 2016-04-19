@@ -175,7 +175,8 @@ var flipCounter = function(d, options){
     y = counter.value.toFixed(counter.decimals);
     _digitCheck(x, y);
     // Do first animation
-    if (counter.auto === true && i<counter.hasta) {
+
+    if (counter.auto === true && y<counter.hasta) {
       nextCount = setTimeout(_doCount, counter.pace);
       i++;
     }
