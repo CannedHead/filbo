@@ -17,9 +17,9 @@ module.exports = function (app, io) {
     }); 
   });
 
-  app.get('/test', function(req, res) {
+  app.get('/vuelvevivienda', function(req, res) {
     optionController.readOptionsCallback(function(err,options){
-      res.render('index', {
+      res.render('vivienda', {
           options: options
       });   
     }); 
