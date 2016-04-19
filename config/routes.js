@@ -41,7 +41,7 @@ module.exports = function (app, io) {
     }); 
   });
 
-  app.get('/saludprioridad', function(req, res) {
+  /*app.get('/saludprioridad', function(req, res) {
     optionController.readOptionsCallback(function(err,options){
       res.render('saludprioridad', {
           options: options
@@ -79,7 +79,7 @@ module.exports = function (app, io) {
           options: options
       });   
     }); 
-  });
+  });*/
 
   app.get('/options', optionController.readOptions);
   app.post('/option', optionController.createOption);
