@@ -8,38 +8,43 @@ html(lang="es")
 
     meta(name='viewport', content='width=device-width, initial-scale=1')
 
-    meta(name='description', content='Conoce hacia dónde va Bogotá y las estrategias para hacerla una ciudad mejor para todos')
+    meta(name='description', content='Yo tuve #ContactoConBogota y conozco las oportunidades que convertirán Bogotá en una ciudad para todos  ¿y tú?')
 
     // Schema.org markup for Google+
-
-    meta(itemprop='name', content='Tu ciudad está cambiando entra en #ContactoConBogota')
+    meta(itemprop='name', content='Yo tuve #ContactoConBogota y conozco las oportunidades que convertirán Bogotá en una ciudad para todos  ¿y tú?')
     meta(itemprop='description', content='Conoce hacia dónde va Bogotá y las estrategias para hacerla una ciudad mejor para todos')
     meta(itemprop='image', content='http://d1q7w1k8zlumh6.cloudfront.net/filbo/GPLUSmapa.png')
 
     // Twitter Card data
-
     meta(name='twitter:card', content='http://d1q7w1k8zlumh6.cloudfront.net/filbo/GPLUSmapa.png')
-    meta(name='twitter:title', content='Tu ciudad está cambiando entra en #ContactoConBogota')
+    meta(name='twitter:title', content='Yo tuve #ContactoConBogota y conozco las oportunidades que convertirán Bogotá en una ciudad para todos  ¿y tú?')
     meta(name='twitter:description', content='Conoce hacia dónde va Bogotá y las estrategias para hacerla una ciudad mejor para todos')
 
     // Twitter summary card with large image must be at least 280x150px
     meta(name='twitter:image:src', content='http://d1q7w1k8zlumh6.cloudfront.net/filbo/GPLUSmapa.png')
 
     // Open Graph data
-    meta(property='og:title', content='Tu ciudad está cambiando entra en #ContactoConBogota')
+    meta(property='og:title', content='Yo tuve #ContactoConBogota y conozco las oportunidades que convertirán Bogotá en una ciudad para todos  ¿y tú?')
     meta(property='og:type', content='article')
     meta(property='og:url', content='http://www.bogotamejorparatodos.gov.co/')
-    meta(property='og:image', content='http://d1q7w1k8zlumh6.cloudfront.net/filbo/MapaBogotaMejor.png')
+    meta(property='og:image', content='http://d1q7w1k8zlumh6.cloudfront.net/filbo/GPLUSmapa.png')
     meta(property='og:description', content='Conoce hacia dónde va Bogotá y las estrategias para hacerla una ciudad mejor para todos')
     meta(property='og:site_name', content='Bogota Mejor Para Todos')
-
     
     link(rel='apple-touch-icon', href='apple-touch-icon.png')
     link(rel='stylesheet', href='css/bootstrap.min.css')
     link(rel='stylesheet', href='css/font-awesome.min.css')
     link(rel='stylesheet', href='css/style2.css')
   body
-    
+    div#fb-root
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
     .container-fluid.content-first
       .row
         .col-xs-6.col-xs-offset-3.col-sm-4-col-sm-offset-4.col-md-3.col-md-offset-0.col-md-push-9
@@ -151,7 +156,7 @@ html(lang="es")
           .no-padding.text-right.redes-sociales.share-icons
             ul.list-inline
               li
-                a(href="http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT")
+                a(data-href="http://www.bogotamejorparatodos.gov.co")
                   i.fa.fa-facebook-square
               li
                 a(href="#" data-size="large" target="_blank").twitter-share-button#twittershare2
@@ -166,7 +171,7 @@ html(lang="es")
         .col-xs-4.no-padding.text-right.redes-sociales
           ul.list-inline
             li
-              a(href="http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT" target="_blank")
+              a(href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbogotamejorparatodos.gov.co%2F" target="_blank")
                 i.fa.fa-facebook-square
             li
               a.twitter-share-button(href="https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20conozco%20las%20oportunidades%20que%20tendr%C3%A1%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Dmapa%20%23FILBo2016%20pic.twitter.com%2FzCoV6iw4zF" data-size="large" target="_blank")
