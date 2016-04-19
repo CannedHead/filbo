@@ -271,12 +271,12 @@ function restartVideo(id){
 
 var socket = io();
 socket.on('update', function(data){
-    console.log(data);
     var id = data.option.id;
     var countval = data.option.count;
     $('#button'+id).attr("data-count",countval);
     if((id-1)===activeButton){
-    	console.log("incrementar +1 contador");
+    	counter1.add(1);
+    	counter2.add(1);
     }
 });
 
