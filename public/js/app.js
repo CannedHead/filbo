@@ -7,7 +7,7 @@ var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
    if ((is_chrome)&&(is_opera)) {is_chrome=false;}
 
    var ie = navigator.appCodeName;
-   console.log(x);
+   console.log(ie);
 
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
 	$( "body , html" ).addClass( "safari-back" );
