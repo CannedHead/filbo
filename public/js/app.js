@@ -14,8 +14,7 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
 }
 
 if ( ie === "Mozilla") {
-	$( "body , html" ).addClass( "safari-back" );
-	alert("ineternet explrorer");
+	//$( "body , html" ).addClass( "safari-back" );
 }
 
 var defaults = {
