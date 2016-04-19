@@ -29,7 +29,7 @@ var content = [
 		"count":"123",
 		"animation":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/BOTON1",
 		"poster":"https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/poster.png",
-		"videourl":'<iframe src="https://player.vimeo.com/video/163272172?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+		"videourl":'https://player.vimeo.com/video/163272172?title=0&byline=0&portrait=0',
 		"facebookurl":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT",
 		"twitterurl":"https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20conozco%20como%20regresa%20la%20vivienda%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Dvivienda%20%23FILBo2016%20pic.twitter.com%2FDCtAFPE0Mk",
 		"googleplus-url":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT"
@@ -41,7 +41,7 @@ var content = [
 		"count":"12345",
 		"animation":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/BOTON2",
 		"poster":"https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/poster.png",
-		"video-url":'<iframe src="https://player.vimeo.com/video/163180113?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+		"video-url":'https://player.vimeo.com/video/163180113?title=0&byline=0&portrait=0',
 		"facebookurl":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT",
 		"twitterurl":"https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20su%20nuevo%20circuito%20verde%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Dcircuitoverde%20%23FILBo2016%20pic.twitter.com%2FioK1WtuSgp%0A",
 		"googlplus-url":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT"
@@ -53,7 +53,7 @@ var content = [
 		"count":"12345",
 		"animation":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/BOTON3",
 		"poster":"https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/poster.png",
-		"video-url":'<iframe src="https://player.vimeo.com/video/163262186?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+		"video-url":'https://player.vimeo.com/video/163262186?title=0&byline=0&portrait=0',
 		"facebookurl":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT",
 		"twitterurl":"https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20s%C3%A9%20como%20la%20salud%20ser%C3%A1%20prioridad%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Dsalud%20%23FILBo2016%20pic.twitter.com%2FkOQKi5icFm",
 		"googleplus-url":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT"
@@ -65,7 +65,7 @@ var content = [
 		"count":"12345",
 		"animation":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/BOTON4",
 		"poster":"https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/poster.png",
-		"video-url":'<iframe src="https://player.vimeo.com/video/163168624?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+		"video-url":'https://player.vimeo.com/video/163168624?title=0&byline=0&portrait=0',
 		"facebookurl":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT",
 		"twitterurl":"https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20conozco%20las%20v%C3%ADas%20que%20tendr%C3%A1%20mi%20ciudad%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Dvias%20%23FILBo2016%20pic.twitter.com%2FCowTKB5bd4",
 		"googleplus-url":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT"
@@ -77,7 +77,7 @@ var content = [
 		"count":"12345",
 		"animation":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/BOTON5",
 		"poster":"https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/poster.png",
-		"videourl":'<iframe src="https://player.vimeo.com/video/163187653?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+		"videourl":'https://player.vimeo.com/video/163187653?title=0&byline=0&portrait=0',
 		"facebookurl":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT",
 		"twitterurl":"https://twitter.com/intent/tweet?text=Tuve%20%23ContactoConBogota%20y%20conozco%20sus%20nuevos%20parques%20y%20canchas%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Dparques%20%23FILBo2016%20pic.twitter.com%2F6APazHPK71",
 		"googleplus-url":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT"
@@ -89,7 +89,7 @@ var content = [
 		"count":"12345",
 		"animation":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/BOTON6",
 		"poster":"https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/poster.png",
-		"videourl":'<iframe src="https://player.vimeo.com/video/163272173?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+		"videourl":'https://player.vimeo.com/video/163272173?title=0&byline=0&portrait=0',
 		"facebookurl":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT",
 		"twitterurl":"https://twitter.com/intent/tweet?text=Tuve%20%23ContactoConBogota%20y%20conozco%20el%20nuevo%20metro%20de%20mi%20ciudad%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Dmetro%20%23FILBo2016%20%20pic.twitter.com%2F8llPIVdFES",
 		"googleplus-url":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT"
@@ -101,7 +101,7 @@ var content = [
 		"count":"12345",
 		"animation":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/BOTON7",
 		"poster":"https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/poster.png",
-		"videourl":'<iframe src="https://player.vimeo.com/video/163176061?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+		"videourl":'https://player.vimeo.com/video/163176061?title=0&byline=0&portrait=0',
 		"facebookurl":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT",
 		"twitterurl":"https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20s%C3%A9%20que%20ser%C3%A1%20una%20ciudad%20educadora%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Deducacion%20%23FILBo2016%20pic.twitter.com%2FLghURSMWrf",
 		"googleplus-url":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT"
@@ -113,7 +113,7 @@ var content = [
 		"count":"12345",
 		"animation":"http://d1q7w1k8zlumh6.cloudfront.net/filbo/BOTON8",
 		"poster":"https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/poster.png",
-		"videourl":'<iframe src="https://player.vimeo.com/video/163176953?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>',
+		"videourl":'https://player.vimeo.com/video/163176953?title=0&byline=0&portrait=0',
 		"facebookurl":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT",
 		"twitterurl":"https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20ya%20no%20tendr%C3%A9%20miedo%20en%20mi%20ciudad%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Dsinmiedo%20%23FILBo2016%20pic.twitter.com%2FQCRJHaOrws",
 		"googleplus-url":"http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT"
@@ -182,6 +182,7 @@ $('#myModal').on('hidden.bs.modal', function (event) {
 	$("#plan-info").addClass('hidden');
 	$("#icons-wrapper").removeClass("selected");
 	$("#icons-wrapper .active").removeClass("active");
+	$('#modalvideo').attr('src',''); 
 	activeButton='';
 	restartVideo(currentVideo);
 });
@@ -201,7 +202,7 @@ function updateInformation(buttonid, limit){
 	$('.modal-icon').attr("src",content[buttonid].icon);
 	modal.find('.modal-title').text(content[buttonid].title);
 	modal.find('.modal-hero').text(content[buttonid].text);
-	modal.find('.video-container').html(content[buttonid].videourl);
+	$('#modalvideo').attr('src',content[buttonid].videourl);
 	$(".video-container").fitVids();
 	$('#twittershare').attr("href",content[buttonid].twitterurl);
 
