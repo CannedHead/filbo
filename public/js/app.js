@@ -10,13 +10,6 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
 	$( "body , html" ).addClass( "safari-back" );
 }
 
-if ( navigator.userAgent.match(/iPad/i) ) {
-	var htmlPlayer = document.getElementsByTagName('video');
-	for(var i = 0; i < htmlPlayer.length; i++){
-		htmlPlayer[0].setAttribute("controls","controls");   
-	}
-}
-
 var content = [
 	{
 		"title":"Vuelve la vivienda a Bogotá",
@@ -249,8 +242,15 @@ function fadeVideos(from , to){
 }
 
 function playVideo(id){
-	var vid = document.getElementById("video"+id);
-	vid.play();
+	if ( navigator.userAgent.match(/iPad/i) ) {
+		var vid = document.getElementById("video"+id);
+		vid.src = "myVideo.mp4";
+		vid.load();		
+		vid.play();
+	} else {
+		var vid = document.getElementById("video"+id);
+		vid.play();
+	}
 }
 
 function restartVideo(id){
