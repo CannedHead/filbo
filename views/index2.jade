@@ -22,11 +22,11 @@ html(lang="es")
               span que vamos a construir
             p.hero Haz clic y conoce cada uno de los planes que tenemos para Bogotá. 
       .row.hidden#plan-info
-        .col-xs-12
+        .col-xs-12.col-md-10.col-md-offset-2
           h2#tituloplan Vuelve la vivienda a Bogotá
-        .col-xs-8
+        .col-xs-8.col-xs-offset-4.col-md-6.col-md-offset-6
           ul.col-xs-12.no-padding.flip-counter.default#counter
-        .col-xs-4.no-padding
+        .col-xs-4.no-padding.hidden-md.hidden-lg
           button.btn-block.btn-ver-mas(data-toggle="modal" data-target="#myModal" data-id="1")
             span Ver más
         .col-xs-12
@@ -34,74 +34,77 @@ html(lang="es")
             | Personas creen en 
             br
             | una Bogotá mejor
-      .col-xs-12.no-padding
-        .col-xs-12#video-container  
-      .col-xs-12.col-md-5.icons-wrapper.buttons-row#icons-wrapper
-        .col-xs-12
-          button.col-xs-3.icon-container.has-feedback(data-id="0" data-count="#{options[0].count}")
-            .number-container.number1.hidden-xs.hidden-sm
-              .number 01
-            .img-container
-              img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/1.svg", 
-                alt="")
-            .circle.outer
-              .circle.inner
-          button.col-xs-3.icon-container.has-feedback(data-id="1" data-count="#{options[1].count}")
-            .number-container.number2.hidden-xs.hidden-sm
-              .number 02
-            .circle.outer
-              .circle.inner
-            .img-container
-              img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/2.svg", 
-                alt="")
-          button.col-xs-3.icon-container.has-feedback(data-id="2" data-count="#{options[2].count}")
-            .number-container.number3.hidden-xs.hidden-sm
-              .number 03
-            .circle.outer
-              .circle.inner
-            .img-container
-              img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/3.svg", 
-                alt="")
-          button.col-xs-3.icon-container.has-feedback(data-id="3" data-count="#{options[3].count}")
-            .number-container.number4.hidden-xs.hidden-sm
-              .number 04
-            .img-container
-              img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/4.svg", 
-                alt="")
-            .circle.outer
-              .circle.inner
-          button.col-xs-3.icon-container.has-feedback(data-id="4" data-count="#{options[4].count}")
-            .number-container.number5.hidden-xs.hidden-sm
-              .number 05
-            .circle.outer
-              .circle.inner
-            .img-container
-              img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/5.svg", 
-                alt="")
-          button.col-xs-3.icon-container.has-feedback(data-id="5" data-count="#{options[5].count}")
-            .number-container.number6.hidden-xs.hidden-sm
-              .number 06
-            .circle.outer
-              .circle.inner
-            .img-container
-              img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/6.svg", 
-                alt="")
-          button.col-xs-3.icon-container.has-feedback(data-id="6" data-count="#{options[6].count}")
-            .number-container.number7.hidden-xs.hidden-sm
-              .number 07
-            .circle.outer
-              .circle.inner
-            .img-container
-              img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/7.svg", 
-                alt="")
-          button.col-xs-3.icon-container.has-feedback(data-id="7" data-count="#{options[7].count}")
-            .number-container.number8.hidden-xs.hidden-sm
-              .number 08
-            .circle.outer
-              .circle.inner
-            .img-container
-              img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/8.svg", 
-                alt="")
+
+      .row
+        .col-xs-12.no-padding.mapa
+          .col-xs-12#video-container  
+        .col-xs-12.col-md-6.icons-wrapper.buttons-row#icons-wrapper
+          .col-xs-12
+            button.col-xs-3.icon-container.has-feedback(data-id="0" data-count="#{options[0].count}")
+              .number-container.number1.hidden-xs.hidden-sm
+                .number 01
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/1.svg", 
+                  alt="")
+              .circle.outer
+                .circle.inner
+            button.col-xs-3.icon-container.has-feedback(data-id="1" data-count="#{options[1].count}")
+              .number-container.number2.hidden-xs.hidden-sm
+                .number 02
+              .circle.outer
+                .circle.inner
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/2.svg", 
+                  alt="")
+            button.col-xs-3.icon-container.has-feedback(data-id="2" data-count="#{options[2].count}")
+              .number-container.number3.hidden-xs.hidden-sm
+                .number 03
+              .circle.outer
+                .circle.inner
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/3.svg", 
+                  alt="")
+            button.col-xs-3.icon-container.has-feedback(data-id="3" data-count="#{options[3].count}")
+              .number-container.number4.hidden-xs.hidden-sm
+                .number 04
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/4.svg", 
+                  alt="")
+              .circle.outer
+                .circle.inner
+            button.col-xs-3.icon-container.has-feedback(data-id="4" data-count="#{options[4].count}")
+              .number-container.number5.hidden-xs.hidden-sm
+                .number 05
+              .circle.outer
+                .circle.inner
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/5.svg", 
+                  alt="")
+            button.col-xs-3.icon-container.has-feedback(data-id="5" data-count="#{options[5].count}")
+              .number-container.number6.hidden-xs.hidden-sm
+                .number 06
+              .circle.outer
+                .circle.inner
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/6.svg", 
+                  alt="")
+            button.col-xs-3.icon-container.has-feedback(data-id="6" data-count="#{options[6].count}")
+              .number-container.number7.hidden-xs.hidden-sm
+                .number 07
+              .circle.outer
+                .circle.inner
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/7.svg", 
+                  alt="")
+            button.col-xs-3.icon-container.has-feedback(data-id="7" data-count="#{options[7].count}")
+              .number-container.number8.hidden-xs.hidden-sm
+                .number 08
+              .circle.outer
+                .circle.inner
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/8.svg", 
+                  alt="")
+
     footer.footer.visible-xs.visible-sm
       .container
         .col-xs-8

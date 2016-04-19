@@ -1019,6 +1019,10 @@ h2{
 		margin-left: 2px;
 	}
 
+	#icons-wrapper{
+		position: relative;
+		top:-300px;
+	}
 
 	.icon-container .number-container .number {
 	    height: 20px;
@@ -1032,7 +1036,18 @@ h2{
 
 	}
 
+	.mapa{
+		position:relative;
+		top:200px;
+	}
 
+	#plan-info{
+		position: absolute;
+		right: 0;
+		top: 270px;
+		z-index: 99;
+		width: 600px;
+	}
 
 
 
