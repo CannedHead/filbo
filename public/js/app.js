@@ -11,11 +11,11 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
 }
 
 var defaults = {
-    value: 0, inc: 1, pace: 500, auto: true, hasta: 1000
+    value: 0, inc: 1, pace: 5, auto: true, hasta: 1000
 };
 
 var defaults2 = {
-    value: 1, inc: 1, pace: 500, auto: true, hasta: 1000
+    value: 1, inc: 1, pace: 5, auto: true, hasta: 1000
 };
 
 var counter1 = new flipCounter('counter', defaults);
