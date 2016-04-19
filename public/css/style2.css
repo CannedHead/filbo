@@ -891,6 +891,11 @@ h2{
 	    right: 55%;
 	}
 
+	.icons-wrapper {
+	    margin-top: 255px;
+	    margin-bottom: 15px;
+	}
+
 
 }
 
@@ -1042,8 +1047,9 @@ h2{
 
 	#icons-wrapper{
 		position: relative;
-		top:-180px;
+		top:0px;
 		z-index: 999;
+		margin-top: 0px;
 	}
 
 	
@@ -1075,7 +1081,8 @@ h2{
 		right: 0;
 		top: 165px;
 		z-index: 99;
-		width: 600px;
+		width: 100%;
+		padding: 0px 50px;
 	}
 
 	.btn-ver-mas {
@@ -1116,9 +1123,17 @@ h2{
 		top: 16px;
 	}
 
-	#tituloplan{
-		position: relative;
-		top: 145px;
+	#tituloplan {
+	
+
+	    text-align: right!important;
+	    border: solid 3px white;
+	    padding: 7px 8px;
+	    /* width: 69%; */
+	    right: 0;
+	    margin-left: 24%;
+	    background-color: white;
+	    color: #00CEFC;
 	}
 
 
@@ -1136,10 +1151,10 @@ h2{
 
 	}
 
-	.social-home{
-		z-index:999;
-		margin-top: 70px;
-		position: relative;
+	.social-home {
+	    z-index: 999;
+	    position: relative;
+	    bottom: -270px;
 	}
 
 	.social-home p{

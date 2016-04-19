@@ -23,7 +23,7 @@ html(lang="es")
               span que vamos a construir
             p.hero Haz clic y conoce cada uno de los planes que tenemos para Bogotá. 
       .row.hidden#plan-info
-        .col-xs-12.col-md-12
+        div
           h2#tituloplan Vuelve la vivienda a Bogotá
         .col-xs-8.col-xs-offset-4.col-md-6.col-md-offset-6
           ul.col-xs-12.no-padding.flip-counter.default#counter
@@ -44,7 +44,7 @@ html(lang="es")
               img.img-responsive(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/Nubes.png")
 
           .col-xs-12.no-padding.has-feedback#video-container  
-        .col-xs-12.col-md-6.col-lg-4.icons-wrapper.buttons-row#icons-wrapper
+        .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-0.col-lg-4.icons-wrapper.buttons-row#icons-wrapper
 
           .col-xs-12
             button.col-xs-3.icon-container.has-feedback#button1(data-id="0" data-count="#{options[0].count}")
