@@ -55,7 +55,13 @@ html, body{
 	top:-40%;
 }
 
+#video-container{
+	z-index:2;
+}
 
+#video-container video{
+	position: absolute;
+}
 
 
 html {
