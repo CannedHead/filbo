@@ -41,7 +41,7 @@ module.exports = function (app, io) {
     }); 
   });
 
-  /*app.get('/saludprioridad', function(req, res) {
+  app.get('/saludprioridad', function(req, res) {
     optionController.readOptionsCallback(function(err,options){
       res.render('saludprioridad', {
           options: options
@@ -49,7 +49,7 @@ module.exports = function (app, io) {
     }); 
   });
   
-  app.get('/parquesycanchas', function(req, res) {
+  /*app.get('/parquesycanchas', function(req, res) {
     optionController.readOptionsCallback(function(err,options){
       res.render('parquesycanchas', {
           options: options
