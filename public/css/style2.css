@@ -1063,6 +1063,7 @@ h2{
 	    width: 120px;
 	    height: 50px;
 	    padding: 8px 30px 8px 8px;
+	    background-color: rgb(255,255,255);
 	}
 
 	.btn-ver-mas span {
