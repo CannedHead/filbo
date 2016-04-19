@@ -10,7 +10,7 @@ if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('
 	$( "body , html" ).addClass( "safari-back" );
 }
 
-if (navigator.userAgent.indexOf('MSIE') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+if (navigator.userAgent.indexOf('MSIE') != -1) {
 	$( "body , html" ).addClass( "safari-back" );
 	alert("ineternet explrorer");
 }
