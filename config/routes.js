@@ -24,7 +24,63 @@ module.exports = function (app, io) {
       });   
     }); 
   });
+
+  app.get('/vias', function(req, res) {
+    optionController.readOptionsCallback(function(err,options){
+      res.render('vias', {
+          options: options
+      });   
+    }); 
+  });
+
+  app.get('/derechoavivirsinmiedo', function(req, res) {
+    optionController.readOptionsCallback(function(err,options){
+      res.render('derechoavivirsinmiedo', {
+          options: options
+      });   
+    }); 
+  });
+
+  app.get('/saludprioridad', function(req, res) {
+    optionController.readOptionsCallback(function(err,options){
+      res.render('saludprioridad', {
+          options: options
+      });   
+    }); 
+  });
   
+  app.get('/parquesycanchas', function(req, res) {
+    optionController.readOptionsCallback(function(err,options){
+      res.render('parquesycanchas', {
+          options: options
+      });   
+    }); 
+  });
+
+  app.get('/circuitoverde', function(req, res) {
+    optionController.readOptionsCallback(function(err,options){
+      res.render('circuitoverde', {
+          options: options
+      });   
+    }); 
+  });
+
+  app.get('/ciudadeducadora', function(req, res) {
+    optionController.readOptionsCallback(function(err,options){
+      res.render('ciudadeducadora', {
+          options: options
+      });   
+    }); 
+  });
+
+  app.get('/metro', function(req, res) {
+    optionController.readOptionsCallback(function(err,options){
+      res.render('metro', {
+          options: options
+      });   
+    }); 
+  });
+
   app.get('/options', optionController.readOptions);
   app.post('/option', optionController.createOption);
   app.post('/option/:id', optionController.increaseOption(io));
