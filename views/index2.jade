@@ -23,7 +23,7 @@ html(lang="es")
               span que vamos a construir
             p.hero Haz clic y conoce cada uno de los planes que tenemos para Bogotá. 
       .row.hidden#plan-info
-        .col-xs-12.col-md-10.col-md-offset-2
+        .col-xs-12.col-md-12
           h2#tituloplan Vuelve la vivienda a Bogotá
         .col-xs-8.col-xs-offset-4.col-md-6.col-md-offset-6
           ul.col-xs-12.no-padding.flip-counter.default#counter
@@ -109,7 +109,24 @@ html(lang="es")
               .img-container
                 img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/8.svg", 
                   alt="")
+      .social-home
+        p Comparte la Bogotá que 
+          br
+          | estamos construyendo
 
+        .hidden-xs.hidden-sm.share-modal-md.no-padding.share-home
+        
+          .no-padding.text-right.redes-sociales.share-icons
+            ul.list-inline
+              li
+                a(href="http://www.facebook.com/sharer.php?s=100&p[title]=Aca titulo&p[summary]=aca descripcion&p[url]=http://filbo.herokuapp.com&p[images][0]=YOUR_IMAGE_TO_SHARE_OBJECT")
+                  i.fa.fa-facebook-square
+              li
+                a(href="#" data-size="large" target="_blank").twitter-share-button#twittershare2
+                  i.fa.fa-twitter
+              li
+                a(href="#")
+                  i.fa.fa-google-plus
     footer.footer.visible-xs.visible-sm
       .container
         .col-xs-8
