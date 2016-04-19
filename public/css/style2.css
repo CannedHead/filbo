@@ -1313,10 +1313,11 @@ h2{
 
 	#plan-info {
 	    position: absolute;
-	    right: -44px;
-	    top: 151px;
+	    right: 25px;
+	    top: 190px;
 	    z-index: 99;
-	    width: 600px;
+	    width: 550px;
+	    padding: 0px 17px;
 	}
 
 	#tituloplan {
@@ -1392,11 +1393,13 @@ h2{
 
 	#plan-info {
 	    position: absolute;
-	    right: -44px;
-	    top: 151px;
+	    right: 25px;
+	    top: 190px;
 	    z-index: 99;
-	    width: 600px;
+	    width: 550px;
+	    padding: 0px 17px;
 	}
+
 
 	.mapa {
 	    position: relative;
@@ -1408,14 +1411,6 @@ h2{
 	    font-size: 1em;
 	}
 
-	#plan-info {
-	    position: absolute;
-	    right: -44px;
-	    top: 151px;
-	    z-index: 99;
-	    width: 600px;
-	}
-
 	.hero-div h1 {
 	    text-align: left;
 	    font-size: 2em;
@@ -1423,7 +1418,7 @@ h2{
 
 	.btn-ver-mas {
 	    right: -270px;
-	    top: 306px;
+	    top: 280px;
 	    width: 120px;
 	    height: 50px;
 	    padding: 8px 30px 8px 8px;
@@ -1567,16 +1562,16 @@ h2{
 
 	.social-home {
 	    z-index: 999;
-	    margin-top: 230px;
+	    margin-top: 150px;
 	    position: relative;
 	}
-
 	#plan-info {
 	    position: absolute;
-	    right: -31px;
-	    top: 257px;
+	    right: 40px;
+	    top: 250px;
 	    z-index: 99;
-	    width: 600px;
+	    width: 550px;
+	    padding: 0px 17px;
 	}
 
 
