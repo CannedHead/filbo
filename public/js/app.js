@@ -21,15 +21,6 @@ var defaults2 = {
 var counter1 = new flipCounter('counter', defaults);
 var counter2 = new flipCounter('counter2', defaults2);
 
-var socket = io();
-socket.on('update', function(data){
-    console.log(data);
-    var id = data.option.id;
-    var countval = data.option.count;
-    $('#button'+id).attr("data-count",countval);
-});
-
-
 var content = [
 	{
 		"title":"Vuelve la vivienda a Bogotá",
@@ -277,6 +268,17 @@ function restartVideo(id){
 		vid.pause();
 		vid.currentTime = 0;
 }
+
+var socket = io();
+socket.on('update', function(data){
+    console.log(data);
+    var id = data.option.id;
+    var countval = data.option.count;
+    $('#button'+id).attr("data-count",countval);
+    if((id-1)===activeButton){
+    	console.log("incrementar +1 contador");
+    }
+});
 
 loadVideos(content);
 
