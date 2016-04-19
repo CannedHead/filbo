@@ -231,7 +231,11 @@ function loadVideos(videos){
   * Creates video HTML tag and adds video to the given container.
   */
 function loadVideoHTML(container, video, videoid, imgposter){
-	$("#"+container).prepend('<video id="video'+videoid+'" class="img-responsive" preload="metadata" poster="'+imgposter+'" style="display:none;"></video>');
+	if(videoid===0){
+		$("#"+container).prepend('<video id="video'+videoid+'" class="img-responsive" preload="metadata" poster="'+imgposter+'" style="opacity:1;"></video>');
+	}else{
+		$("#"+container).prepend('<video id="video'+videoid+'" class="img-responsive" preload="metadata" poster="'+imgposter+'" style="opacity:0;"></video>');
+	}
 	$("#video"+videoid).append('<source src="'+video+'.mp4">');
 	$("#video"+videoid).append('<source src="'+video+'.ogg">');
 	$("#video"+videoid).append('<source src="'+video+'.webm">');
@@ -248,8 +252,12 @@ function fadeVideos(from , to){
 		vid.pause();
 		vid.currentTime = 0.1;
 
-		$("#video"+from).css("display","none");
-		$("#video"+to).css("display","block");
+		//$("#video"+from).css("display","none");
+		//$("#video"+to).css("display","block");
+
+		$("#video"+to).css("opacity",0).delay(100).animate({opacity:1},400).css("zIndex",-2).animate({zIndex:-1},200);
+	    $("#video"+from).css("opacity",1).delay(100).animate({opacity:0},800).css("zIndex",-1).animate({zIndex:-2},200);
+
 		currentVideo=to;
 	}
 }
