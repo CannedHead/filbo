@@ -7,12 +7,20 @@ var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
    if ((is_chrome)&&(is_opera)) {is_chrome=false;}
 
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-
-	
 	$( "body , html" ).addClass( "safari-back" );
-
-
 }
+
+var defaults = {
+    value: 0, inc: 1, pace: 500, auto: true, hasta: 1000
+};
+
+var defaults2 = {
+    value: 1, inc: 1, pace: 500, auto: true, hasta: 1000
+};
+
+var counter1 = new flipCounter('counter', defaults);
+var counter2 = new flipCounter('counter2', defaults2);
+
 var content = [
 	{
 		"title":"Vuelve la vivienda a Bogotá",
@@ -195,16 +203,15 @@ function updateInformation(buttonid, limit){
 	$('#twittershare').attr("href",content[buttonid].twitterurl);
 
 	var count = parseInt(content[buttonid].count);
-    var defaults = {
-        value: 0, inc: 1, pace: 500, auto: true, hasta: limit
-    };
-
-    var defaults2 = {
-        value: 1, inc: 1, pace: 500, auto: true, hasta: limit
-    };
-
-    var counter1 = new flipCounter('counter', defaults);
-    var counter2 = new flipCounter('counter2', defaults2);
+    
+    counter1.stop();
+    counter2.stop();
+    counter1.setValue(0);
+    counter2.setValue(0);
+	counter1.setHasta(limit);
+	counter2.setHasta(limit);
+	counter1.start();
+	counter2.start();
 } 
 
 /**
@@ -245,8 +252,15 @@ function fadeVideos(from , to){
 }
 
 function playVideo(id){
-	var vid = document.getElementById("video"+id);
-	vid.play();
+	if ( navigator.userAgent.match(/iPad/i) ) {
+		var vid = document.getElementById("video"+id);
+		vid.src = content[id].animation+".mp4";
+		vid.load();		
+		vid.play();
+	} else {
+		var vid = document.getElementById("video"+id);
+		vid.play();
+	}
 }
 
 function restartVideo(id){
@@ -254,6 +268,17 @@ function restartVideo(id){
 		vid.pause();
 		vid.currentTime = 0;
 }
+
+var socket = io();
+socket.on('update', function(data){
+    console.log(data);
+    var id = data.option.id;
+    var countval = data.option.count;
+    $('#button'+id).attr("data-count",countval);
+    if((id-1)===activeButton){
+    	console.log("incrementar +1 contador");
+    }
+});
 
 loadVideos(content);
 
