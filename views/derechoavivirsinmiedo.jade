@@ -1,0 +1,267 @@
+doctype html
+html(lang="es")
+  head
+    link(rel="icon" type="image/png" href="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/favicon/favicon-32x32.png")
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Bogotá mejor para todos
+
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    meta(name='description', content='Yo tuve #ContactoConBogota y conozco el plan para vivir sin miedo en mi ciudad ¿y tú?')
+    // Schema.org markup for Google+
+    meta(itemprop='name', content='Yo tuve #ContactoConBogota y conozco el plan para vivir sin miedo en mi ciudad ¿y tú?')
+    meta(itemprop='description', content='Conoce hacia donde va Bogotá y las estrategias para hacerla una ciudad mejor para todos #FILBo2016')
+    meta(itemprop='image', content='http://d1q7w1k8zlumh6.cloudfront.net/filbo/GPLUSSinMiedoVideo.PNG')
+    // Twitter Card data
+    meta(name='twitter:card', content='http://d1q7w1k8zlumh6.cloudfront.net/filbo/GPLUSSinMiedoVideo.PNG')
+    meta(name='twitter:title', content='Yo tuve #ContactoConBogota y conozco el plan para vivir sin miedo en mi ciudad ¿y tú?')
+    meta(name='twitter:description', content='Conoce hacia dónde va Bogotá y las estrategias para hacerla una ciudad mejor para todos #FILBo2016')
+    // Twitter summary card with large image must be at least 280x150px
+    meta(name='twitter:image:src', content='http://d1q7w1k8zlumh6.cloudfront.net/filbo/GPLUSSinMiedoVideo.PNG')
+    // Open Graph data
+    meta(property='og:title', content='Yo tuve #ContactoConBogota y conozco el plan para vivir sin miedo en mi ciudad ¿y tú?')
+    meta(property='og:type', content='article')
+    meta(property='og:url', content='http://bogotamejorparatodos.gov.co/')
+    meta(property='og:image', content='http://d1q7w1k8zlumh6.cloudfront.net/filbo/GPLUSSinMiedoVideo.PNG')
+    meta(property='og:description', content='Conoce hacia dónde va Bogotá y las estrategias para hacerla una ciudad mejor para todos #FILBo2016')
+    meta(property='og:site_name', content='Bogota Mejor Para Todos')
+    
+    link(rel='apple-touch-icon', href='apple-touch-icon.png')
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    link(rel='stylesheet', href='css/font-awesome.min.css')
+    link(rel='stylesheet', href='css/style2.css')
+  body
+    div#fb-root
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    .container-fluid.content-first
+      .row
+        .col-xs-6.col-xs-offset-3.col-sm-4-col-sm-offset-4.col-md-3.col-md-offset-0.col-md-push-9
+          img.img-responsive.logo(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/bogotamejorparatodos_blanco.svg", alt="Bogotá mejor para todos")
+        .col-xs-12.col-md-9.col-md-pull-3.hero-div
+          h1
+            p Esta es la Bogotá
+              br
+              span que vamos a construir
+            p.hero Haz clic y conoce cada uno de los planes que tenemos para Bogotá. 
+      .row.hidden#plan-info
+        div
+          h2#tituloplan Vuelve la vivienda a Bogotá
+        .col-xs-8.col-xs-offset-4.col-md-6.col-md-offset-6
+          ul.col-xs-12.no-padding.flip-counter.default#counter
+        .col-xs-4.no-padding
+          button.btn-block.btn-ver-mas(data-toggle="modal" data-target="#myModal" data-id="1")
+            span Ver más
+         
+        .col-xs-12
+          p.subhero 
+            | Personas creen en 
+            br
+            | una Bogotá mejor
+
+      .row
+        .col-xs-12.no-padding.mapa.has-feedback
+          ul.col-xs-12.no-padding#scene
+            li.col-xs-12.no-padding.layer(data-depth="0.20")
+              img.img-responsive(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/nube_01.svg")
+            li.col-xs-12.no-padding.layer(data-depth="0.50")
+              img.img-responsive(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/nube_02.svg")
+            li.col-xs-12.no-padding.layer(data-depth="0.40")
+              img.img-responsive(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/nube_03.svg")
+            li.col-xs-12.no-padding.layer(data-depth="0.60")
+              img.img-responsive(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/nube_04.svg")
+            li.col-xs-12.no-padding.layer(data-depth="0.40")
+              img.img-responsive(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/nube_05.svg")
+            li.col-xs-12.no-padding.layer(data-depth="0.20")
+              img.img-responsive(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/nube_06.svg")
+
+          .col-xs-12.no-padding.has-feedback#video-container  
+        .col-xs-12.col-sm-8.col-sm-offset-2.col-md-6.col-md-offset-0.col-lg-4.icons-wrapper.buttons-row#icons-wrapper
+
+          .col-xs-12
+            button.col-xs-3.icon-container.has-feedback#button1(data-id="0" data-count="#{options[0].count}")
+              .number-container.number1.hidden-xs.hidden-sm
+                .number 01
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/1.svg", 
+                  alt="")
+              
+            button.col-xs-3.icon-container.has-feedback#button2(data-id="1" data-count="#{options[1].count}")
+              .number-container.number2.hidden-xs.hidden-sm
+                .number 02
+              
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/2.svg", 
+                  alt="")
+            button.col-xs-3.icon-container.has-feedback#button3(data-id="2" data-count="#{options[2].count}")
+              .number-container.number3.hidden-xs.hidden-sm
+                .number 03
+              
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/3.svg", 
+                  alt="")
+            button.col-xs-3.icon-container.has-feedback#button4(data-id="3" data-count="#{options[3].count}")
+              .number-container.number4.hidden-xs.hidden-sm
+                .number 04
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/4.svg", 
+                  alt="")
+              
+            button.col-xs-3.icon-container.has-feedback#button5(data-id="4" data-count="#{options[4].count}")
+              .number-container.number5.hidden-xs.hidden-sm
+                .number 05
+              
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/5.svg", 
+                  alt="")
+            button.col-xs-3.icon-container.has-feedback#button6(data-id="5" data-count="#{options[5].count}")
+              .number-container.number6.hidden-xs.hidden-sm
+                .number 06
+              
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/6.svg", 
+                  alt="")
+            button.col-xs-3.icon-container.has-feedback#button7(data-id="6" data-count="#{options[6].count}")
+              .number-container.number7.hidden-xs.hidden-sm
+                .number 07
+              
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/7.svg", 
+                  alt="")
+            button.col-xs-3.icon-container.has-feedback#button8(data-id="7" data-count="#{options[7].count}")
+              .number-container.number8.hidden-xs.hidden-sm
+                .number 08
+              
+              .img-container
+                img( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/8.svg", 
+                  alt="")
+      .social-home.hidden-xs.hidden-sm
+        p Comparte la Bogotá que 
+          br
+          | estamos construyendo
+
+        .share-modal-md.no-padding.share-home
+        
+          .no-padding.text-right.redes-sociales.share-icons
+            ul.list-inline
+              li
+                a(href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbogotamejorparatodos.gov.co%2F" target="_blank")
+                  i.fa.fa-facebook-square
+              li
+                a.twitter-share-button(href="https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20conozco%20las%20oportunidades%20que%20tendr%C3%A1%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%20%23FILBo2016%20pic.twitter.com%2FzCoV6iw4zF" data-size="large" target="_blank")
+                  i.fa.fa-twitter
+              li
+                a(href="https://plus.google.com/share?url=http%3A%2F%2Fbogotamejorparatodos.gov.co%2F" target="_blank")
+                  i.fa.fa-google-plus
+    footer.footer.visible-xs.visible-sm
+      .container
+        .col-xs-8
+          p.text-muted Comparte la Bogotá que estamos construyendo
+        .col-xs-4.no-padding.text-right.redes-sociales
+          ul.list-inline
+            li
+              a(href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbogotamejorparatodos.gov.co%2F" target="_blank")
+                i.fa.fa-facebook-square
+            li
+              a.twitter-share-button(href="https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20conozco%20las%20oportunidades%20que%20tendr%C3%A1%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%20%23FILBo2016%20pic.twitter.com%2FzCoV6iw4zF" data-size="large" target="_blank")
+                i.fa.fa-twitter
+            li
+              a(href="https://plus.google.com/share?url=http%3A%2F%2Fbogotamejorparatodos.gov.co%2F" target="_blank")
+                i.fa.fa-google-plus
+    .modal.fade.no-padding(id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+    
+        .col-xs-12.col-md-9.no-padding.modal-content
+          .col-xs-12.modal-header
+            button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true") &times;
+            button.hidden-xs(type="button" class="close-add" data-dismiss="modal" aria-label="Close")
+                p Volver al mapa
+            .col-xs-12.col-md-3.no-padding
+              .icon-modal-container.has-feedback
+                .img-container
+                  img.modal-icon( class="img-responsive" src="http://d1q7w1k8zlumh6.cloudfront.net/filbo/1.svg" alt="")
+                .circle.outer
+                  .circle.inner
+            .col-xs-12.col-md-9.col-lg-8.no-padding
+              h3.modal-title Vuelve la vivienda a Bogotá
+              p.modal-hero 6 nuevos hospitales + 40 nuevos Centros de Atención Prioritaria en Salud.
+              .video-container.col-xs-12.col-sm-8.col-sm-offset-2.col-md-10.col-md-offset-1.no-padding
+                iframe#modalvideo(src="https://player.vimeo.com/video/163168624?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+        .col-xs-12.col-md-3.modal-counter-container
+          img.img-responsive.cadena1.visible-md.visible-lg(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/cadena.svg", alt="Bogotá mejor para todos") 
+          img.img-responsive.cadena2.visible-md.visible-lg(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/cadena.svg", alt="Bogotá mejor para todos")
+
+
+          img.img-responsive.cadena1small.visible-xs.visible-sm(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/cadena_popup.svg", alt="Bogotá mejor para todos") 
+          img.img-responsive.cadena2small.visible-xs.visible-sm(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/cadena_popup.svg", alt="Bogotá mejor para todos")
+           
+          ul.no-padding.flip-counter.default#counter2
+          .col-xs-12
+            p 
+              | Personas creen en 
+              br
+              | una mejor Bogotá.
+          .col-md-10.col-md-offset-1.col-lg-8.col-lg-offset-2.hidden-xs.hidden-sm.share-modal-md.no-padding
+          
+            .col-xs-7.no-padding.share-compartir
+              p.text-muted Compartir
+            .col-xs-5.no-padding.text-right.redes-sociales.share-icons
+              ul.list-inline
+                li
+                  a.facebookshare(href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbogotamejorparatodos.gov.co%2F" target="_blank")
+                    i.fa.fa-facebook-square
+                li
+                  a.twittershare.twitter-share-button(href="https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20conozco%20las%20oportunidades%20que%20tendr%C3%A1%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Dmapa%20%23FILBo2016%20pic.twitter.com%2FzCoV6iw4zF" data-size="large" target="_blank")
+                    i.fa.fa-twitter
+                li
+                  a.googleplusshare(href="https://plus.google.com/share?url=http%3A%2F%2Fbogotamejorparatodos.gov.co%2F" target="_blank")
+                    i.fa.fa-google-plus
+
+          .col-xs-10.col-xs-offset-1.col-sm-6.col-sm-offset-3.col-md-11.col-md-offset-0.col-lg-10.col-lg-offset-1.img-modal-bogota
+            img.img-responsive(src="https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/bogotamejorparatodos_popup.svg", alt="Bogotá mejor para todos")
+          .col-xs-12.modal-footer.footer.visible-xs.visible-sm
+            .container.no-padding
+              .col-xs-7
+                p.text-muted Comparte la Bogotá que estamos construyendo
+              .col-xs-5.no-padding.text-right.redes-sociales
+                ul.list-inline
+                  li
+                    a.facebookshare(href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbogotamejorparatodos.gov.co%2F" target="_blank")
+                      i.fa.fa-facebook-square
+                  li
+                    a.twittershare.twitter-share-button(href="https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20conozco%20las%20oportunidades%20que%20tendr%C3%A1%20%C2%BFy%20t%C3%BA%3F%20bogotamejorparatodos.gov.co%3Fm%3Dmapa%20%23FILBo2016%20pic.twitter.com%2FzCoV6iw4zF" data-size="large" target="_blank")
+                      i.fa.fa-twitter
+                  li
+                    a.googleplusshare(href="https://plus.google.com/share?url=http%3A%2F%2Fbogotamejorparatodos.gov.co%2F" target="_blank")
+                      i.fa.fa-google-plus
+
+
+    script(src="js/jquery-1.12.3.min.js")
+    script(src="js/socket.io.js")
+    script(src="js/bootstrap.min.js")
+    script(src="js/parallax.min.js")
+    script(src="js/flipCounter.js")
+    script(src="js/jquery.fitvids.js")
+    script(src="js/app.js")      
+    script.
+      var scene = document.getElementById('scene');
+      var parallax = new Parallax(scene);
+
+      $(window).load(function(){
+        var buttonid = $("#button8").data('id');
+        var hasta = $("#button8").data('count');
+        updateInformation(buttonid,hasta);
+        $('#myModal').modal('show');
+      });
+
+
+    
+     
+      
