@@ -253,6 +253,13 @@ html(lang="es")
       var scene = document.getElementById('scene');
       var parallax = new Parallax(scene);
 
+      $(window).load(function(){
+        var buttonid = $("#button1").data('id');
+        var hasta = $("#button1").data('count');
+        updateInformation(buttonid,hasta);
+        $('#myModal').modal('show');
+      });
+
 
     
      
