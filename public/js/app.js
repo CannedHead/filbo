@@ -254,7 +254,7 @@ function fadeVideos(from , to){
 function playVideo(id){
 	if ( navigator.userAgent.match(/iPad/i) ) {
 		var vid = document.getElementById("video"+id);
-		vid.src = "myVideo.mp4";
+		vid.src = content[id].animation+".mp4";
 		vid.load();		
 		vid.play();
 	} else {
