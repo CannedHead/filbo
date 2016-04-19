@@ -7,12 +7,16 @@ var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
    if ((is_chrome)&&(is_opera)) {is_chrome=false;}
 
 if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-
-	
 	$( "body , html" ).addClass( "safari-back" );
-
-
 }
+
+if ( navigator.userAgent.match(/iPad/i) ) {
+	var htmlPlayer = document.getElementsByTagName('video');
+	for(var i = 0; i < htmlPlayer.length; i++){
+		htmlPlayer[0].setAttribute("controls","controls");   
+	}
+}
+
 var content = [
 	{
 		"title":"Vuelve la vivienda a Bogotá",
