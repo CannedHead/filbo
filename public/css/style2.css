@@ -1089,13 +1089,13 @@ h2{
 		top:200px;
 	}
 
-	#plan-info{
-		position: absolute;
-		right: 0;
-		top: 165px;
-		z-index: 99;
-		width: 100%;
-		padding: 0px 50px;
+	#plan-info {
+	    position: absolute;
+	    right: 0;
+	    top: 165px;
+	    z-index: 99;
+	    width: 49%;
+	    padding: 0px 80px;
 	}
 
 	.btn-ver-mas {
@@ -1140,7 +1140,6 @@ h2{
 	
 
 	    text-align: right!important;
-	    border: solid 3px white;
 	    padding: 7px 8px;
 	    /* width: 69%; */
 	    right: 0;
