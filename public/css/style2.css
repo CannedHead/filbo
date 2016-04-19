@@ -1016,7 +1016,7 @@ h2{
 
 	.hero-div h1 p span{
 	
-		margin-left: 2px;
+		margin-left: 5px;
 	}
 
 	#icons-wrapper{
@@ -1051,7 +1051,7 @@ h2{
 	#plan-info{
 		position: absolute;
 		right: 0;
-		top: 270px;
+		top: 165px;
 		z-index: 99;
 		width: 600px;
 	}
@@ -1059,7 +1059,7 @@ h2{
 	.btn-ver-mas {
 	    right: -270px;
 	    position: absolute;
-	    top: 230px;
+	    top: 335px;
 	    width: 120px;
 	    height: 50px;
 	    padding: 8px 30px 8px 8px;
@@ -1091,6 +1091,11 @@ h2{
 		border-color: transparent transparent transparent #1C75BC;
 		right: 15px;
 		top: 16px;
+	}
+
+	#tituloplan{
+		position: relative;
+		top: 170px;
 	}
 
 
