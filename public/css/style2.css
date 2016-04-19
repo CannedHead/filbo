@@ -40,7 +40,6 @@ html, body{
 	background-color: #0FBCEA;
 }
 
-
 @-moz-document url-prefix() {
     html, body{
     	background-color: #0FBCEA;
