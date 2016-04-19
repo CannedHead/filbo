@@ -38,10 +38,7 @@
 
 html, body{
 	background-color: #0FBCEA;
-	overflow-x:hidden;
-
 }
-
 
 @-moz-document url-prefix() {
     html, body{
