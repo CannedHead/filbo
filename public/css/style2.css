@@ -49,7 +49,11 @@ html, body{
     }
 }
 
-
+#scene{
+	position: absolute;
+	z-index: 2;
+	top:-40%;
+}
 
 
 
