@@ -741,6 +741,18 @@ h2{
 	z-index: 5;
 }
 
+#tituloplan {
+
+
+    text-align: right!important;
+    padding: 7px 8px;
+    /* width: 69%; */
+    right: 0;
+    margin-left: 24%;
+    background-color: white;
+    color: #00CEFC;
+}
+
 
 
 
@@ -902,6 +914,21 @@ h2{
 	.icons-wrapper {
 	    margin-top: 255px;
 	    margin-bottom: 15px;
+	}
+
+	.btn-ver-mas{
+		position:relative;
+		text-align: left;
+		-webkit-border-radius: 80px;
+		-moz-border-radius: 80px;
+		border-radius: 80px;
+		padding: 3px;
+		height: 30px;
+		font-size: 0.8em;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+		border: none;
+		width: 50%;
+		z-index: 999;
 	}
 
 
