@@ -51,7 +51,7 @@ var content = [
 		"videourl":'https://player.vimeo.com/video/163180113?title=0&byline=0&portrait=0',
 		"facebookurl":"https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbogotamejorparatodos.gov.co%2Fcircuitoverde%0A%0A",
 		"twitterurl":"https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20conozco%20el%20nuevo%20circuito%20verde%20que%20tendr%C3%A1%20mi%20ciudad%20%C2%BFy%20t%C3%BA%3F%20%23FILBO2016%20pic.twitter.com%2FioK1WtuSgp%0A",
-		"googlplusurl":"https://plus.google.com/share?url=http%3A%2F%2Fbogotamejorparatodos.gov.co%2Fcircuitoverde%0A%0A"
+		"googleplusurl":"https://plus.google.com/share?url=http%3A%2F%2Fbogotamejorparatodos.gov.co%2Fcircuitoverde%0A%0A"
 	},
 	{
 		"title":"La salud de los bogotanos será prioridad",
