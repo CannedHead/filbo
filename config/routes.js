@@ -56,7 +56,7 @@ module.exports = function (app, io) {
       });   
     }); 
   });
- /*
+ 
   app.get('/circuitoverde', function(req, res) {
     optionController.readOptionsCallback(function(err,options){
       res.render('circuitoverde', {
@@ -64,7 +64,7 @@ module.exports = function (app, io) {
       });   
     }); 
   });
-
+  /*
   app.get('/ciudadeducadora', function(req, res) {
     optionController.readOptionsCallback(function(err,options){
       res.render('ciudadeducadora', {
