@@ -49,14 +49,14 @@ module.exports = function (app, io) {
     }); 
   });
   
-  /*app.get('/parquesycanchas', function(req, res) {
+  app.get('/parquesycanchas', function(req, res) {
     optionController.readOptionsCallback(function(err,options){
       res.render('parquesycanchas', {
           options: options
       });   
     }); 
   });
-
+ /*
   app.get('/circuitoverde', function(req, res) {
     optionController.readOptionsCallback(function(err,options){
       res.render('circuitoverde', {
