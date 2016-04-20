@@ -64,7 +64,7 @@ module.exports = function (app, io) {
       });   
     }); 
   });
-  /*
+ 
   app.get('/ciudadeducadora', function(req, res) {
     optionController.readOptionsCallback(function(err,options){
       res.render('ciudadeducadora', {
@@ -79,7 +79,7 @@ module.exports = function (app, io) {
           options: options
       });   
     }); 
-  });*/
+  });
 
   app.get('/options', optionController.readOptions);
   app.post('/option', optionController.createOption);
