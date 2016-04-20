@@ -62,7 +62,7 @@ var content = [
 		"poster":"https://s3-sa-east-1.amazonaws.com/cannedhead.canned/filbo/poster.png",
 		"videourl":'https://player.vimeo.com/video/163262186?title=0&byline=0&portrait=0',
 		"facebookurl":"https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbogotamejorparatodos.gov.co%2Fsaludprioridad",
-		"twitterurl":"Yo%20tuve%20%23ContactoConBogota%20y%20conozco%20como%20la%20salud%20ser%C3%A1%20una%20prioridad%20%C2%BFy%20t%C3%BA%3F%20%23FILBO2016%20pic.twitter.com%2FkOQKi5icFm",
+		"twitterurl":"https://twitter.com/intent/tweet?text=Yo%20tuve%20%23ContactoConBogota%20y%20conozco%20como%20la%20salud%20ser%C3%A1%20una%20prioridad%20%C2%BFy%20t%C3%BA%3F%20%23FILBO2016%20pic.twitter.com%2FkOQKi5icFm",
 		"googleplusurl":"https://plus.google.com/share?url=http%3A%2F%2Fbogotamejorparatodos.gov.co%2Fsaludprioridad"
 	},
 	{
